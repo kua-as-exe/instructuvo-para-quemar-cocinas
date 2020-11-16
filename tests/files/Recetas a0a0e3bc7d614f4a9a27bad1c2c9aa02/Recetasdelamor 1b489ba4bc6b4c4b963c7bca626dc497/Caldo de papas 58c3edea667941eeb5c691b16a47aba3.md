@@ -1,12 +1,11 @@
 # Caldo de papas
 
-Created: Nov 13, 2020 7:32 PM
+Autor: Elisabet Juárez
 Lito: Yes
 
 ## Ingredientes
 
 - 3 papas (500g)
-- 6 cucharadas de aceite
 - 1/5 de cebolla (20g aproximadamente)
 - 4 tazas de caldo de pollo
 - 1 rama de epazote (10g)
@@ -26,9 +25,9 @@ Lito: Yes
 
 ---
 
-> ⌛ Tiempo de preparación 25-30 minutos
+> ⌛ Tiempo de preparación: 25-30 minutos
 
-> 🧇 Capacidad 6 personas
+> 🥞 Capacidad: 6 personas
 
 ## Tips
 

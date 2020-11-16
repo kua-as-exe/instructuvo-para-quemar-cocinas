@@ -1,7 +1,8 @@
 # Crema de champiñones
 
-Created: Nov 13, 2020 6:47 PM
+Autor: Elisabet Juárez
 Lito: Yes
+Tags: Champiñones
 
 ## Ingredientes
 
@@ -30,11 +31,11 @@ Lito: Yes
 
 ---
 
-> Tiempo de preparación 15-20 minutos
+> ⌛ Tiempo de preparación 15-20 minutos
 
-> Capacidad 6 personas
+> 🥞 Capacidad 6 personas
 
 ## Tips
 
-> Para verificar si están suaves, al insertar un tenedor en ellas sea sencillo
-Para convertirla en sopa sustituir la leche por agua
+> 🔆 Para verificar si están suaves, al insertar un tenedor en ellas sea sencillo
+🔆 Para convertirla en sopa sustituir la leche por agua

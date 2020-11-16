@@ -2,4 +2,4 @@
 
 Calorías: 120
 Grasas: 13.6
-Por: (g): 15
+gramos: 15

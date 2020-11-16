@@ -1,6 +1,6 @@
 # Crema de chayote
 
-Created: Nov 11, 2020 1:21 PM
+Autor: Elisabet Juárez
 Lito: Yes
 
 ## Ingredientes
@@ -30,9 +30,9 @@ Lito: Yes
 
 ---
 
-> ⌛ Tiempo de preparación 15-25 minutos
+> ⌛ Tiempo de preparación: 15-25 minutos
 
-> 🧇 Capacidad 6 personas
+> 🥞 Capacidad: 6 personas
 
 ## Tips
 

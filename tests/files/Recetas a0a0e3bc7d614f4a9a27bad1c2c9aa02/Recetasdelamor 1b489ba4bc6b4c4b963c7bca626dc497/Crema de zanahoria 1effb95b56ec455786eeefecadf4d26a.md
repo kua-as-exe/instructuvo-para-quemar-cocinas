@@ -1,6 +1,7 @@
 # Crema de zanahoria
 
-Created: Nov 13, 2020 6:13 PM
+Autor: Elisabet Juárez
+Descripción: zanahoria
 Lito: Yes
 
 ## Ingredientes
@@ -33,9 +34,9 @@ Lito: Yes
 
 ---
 
-> ⌛  Tiempo de preparación 15-20 minutos
+> ⌛  Tiempo de preparación: 15-20 minutos
 
-> 🧇  Capacidad 4-6 personas
+> **🥞**  Capacidad: 4-6 personas
 
 ## Tips
 

@@ -1,13 +1,13 @@
 # Crema de espinacas
 
-Created: Nov 13, 2020 7:11 PM
+Autor: Elisabet Juárez
 Lito: Yes
 
 ## Ingredientes
 
 - 1 cucharada de mantequilla
-- 4 ramas de espinacas
-- 1/5 de cebolla
+- 4 ramas de espinacas (80g aproximadamente)
+- 1/5 de cebolla (20g aproximadamente)
 - 2 tazas de agua
 - 1 taza de leche
 - 1/3 de taza de leche evaporada
@@ -29,7 +29,7 @@ Lito: Yes
 
 > ⌛ Tiempo de preparación de 15-20 minutos
 
-> 🧇 Capacidad 6 personas
+> 🥞 Capacidad 6 personas
 
 ## Tips
 

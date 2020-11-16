@@ -1,6 +1,5 @@
 # Receta
 
-Created: Oct 27, 2020 8:28 PM
 Lito: No
 
 ## Ingredientes

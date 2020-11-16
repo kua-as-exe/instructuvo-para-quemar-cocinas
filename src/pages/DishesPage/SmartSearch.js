@@ -11,23 +11,7 @@ export default function HomePage() {
 
     return (
        <Section>
-            <Container>
-                <Hero color="secondary" >
-                    <Hero.Body>
-                        <Container>
-                            <Heading>
-                                Instructivo para quemar cocinas
-                            </Heading>
-                            <Heading subtitle size={4}>
-                                Tu CAS de tips y recetas de cocina con la calidad y sabor mexicano
-                            </Heading>
-                        </Container>
-                    </Hero.Body>
-                </Hero>
-                <Box>
-                    <h1>Ola</h1>
-                </Box>
-            </Container>
+            
         </Section>
     )
 }

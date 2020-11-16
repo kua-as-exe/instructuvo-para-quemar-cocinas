@@ -19,8 +19,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "bulma": "^0.9.1",
-    "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-bulma-components": "^3.4.0",
     "react-dom": "^16.14.0",
@@ -35,7 +33,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "papas": "node ./tests/convert.js"
+    "papas": "node ./tests/convert.js",
+    "css-build": "node-sass --omit-source-map-url src/scss/App.scss src/App.css",
+    "css-watch": "npm run css-build -- --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -55,6 +55,8 @@
   "devDependencies": {
     "@editorjs/editorjs": "^2.19.0",
     "@editorjs/paragraph": "^2.8.0",
+    "bulma": "^0.9.1",
+    "node-sass": "^4.14.1",
     "react-editor-js": "^1.6.2"
   }
 }

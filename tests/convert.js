@@ -1,43 +1,66 @@
 // const { parse } = require('../tools/markdown');
-const { readFileSync, readdirSync } = require('fs');
+const { readFileSync, readdirSync, writeFileSync } = require('fs');
+const { type } = require('os');
 const { parse, join } = require('path');
 
-const hideMetadata = true;
+const hideMetadata = false;
 const base = 'tests'
 const dir = 'files';
+const dishesDataPath = 'src/data/dishes.js';
 
 const getMarkdown = ( filePath ) => {
     let mdString = readFileSync(filePath).toString()
     let md = mdString.split('\n\n');
     return md;
 }
+const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+} 
+const toTitleCase = (phrase) => {
+    return phrase
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+};
 
 const process = (filePath) => {
-    const extractInline = (md = [""], ocurrence = "") => {
-        let text = '';
-        let index = md.findIndex( (text) => text && text.includes(ocurrence));
-        if(index !== -1){
-            text = md[index];
-            text = text.slice(text.indexOf(ocurrence)+ocurrence.length, text.length).trim();
-            delete md[index];
-        }
+    const extractInline = (md = [""], ocurrences = []) => {
+        let text;
+        if(typeof(ocurrences) === 'string')
+            ocurrences = [ocurrences];
+
+        ocurrences.forEach( ocurrence => {  
+            let index = md.findIndex( (text) => text && text.includes(ocurrence));
+            if(index !== -1){
+                let t = md[index];
+                t = t.slice(t.indexOf(ocurrence)+ocurrence.length, t.length).trim();
+                //delete md[index];
+                if(t && t !== '') text = t;
+            }
+        })
         return text;
     }
 
     const data = {
-        type: 'markdown',
+        contentType: 'markdown',
+        url: '',
         title: '',
         content: [],
         nutricionalInformation: [],
         aproxTime: '',
-        capacity: ''
+        capacity: '',
+        tags: [],
+        description: '',
+        author: '',
+        img:{},
+        lito: false
     }
 
     let md = getMarkdown(filePath);
 
     data.title = md[0].replace('# ', '');
     delete md[0];
-    if(hideMetadata) delete md[1] // metadata is on second pos
     
     //EXTRACT NUTITIONAL INFORMATION
     const nutInfoItem = md.findIndex( (text) => text == '## Información nutricional');
@@ -48,9 +71,26 @@ const process = (filePath) => {
         delete md[nutInfoItem];
         delete md[nutInfoItem+1];
     }
+    data.aproxTime = extractInline(md, ['Tiempo de preparación', 'Tiempo de preparación:']);
+    data.capacity = extractInline(md, ['Capacidad', 'Capacidad:']);
 
-    data.aproxTime = extractInline(md, 'Tiempo de preparación:');
-    data.capacity = extractInline(md, 'Capacidad');
+    let metadata = md[1].split('\n');
+    data.author = extractInline(metadata, 'Autor:');
+    data.description = extractInline(metadata, 'Descripción:');
+    data.lito = extractInline(metadata, 'Lito:');
+    if(extractInline(metadata, 'Tags:'))
+        data.tags = extractInline(metadata, 'Tags:').split(', ');
+
+    data.aproxTime = extractInline(md, 'TiempoAprox') || data.aproxTime;
+    data.capacity = extractInline(md, 'Personas') || data.capacity;
+    delete md[1] // metadata is on second pos
+    
+    data.url = 
+        encodeURI(
+            removeAccents(
+                toTitleCase(data.title)
+            ).replace(/ /g, '')
+        );
 
     md = md.filter( text => text !== undefined);
     data.content = md;
@@ -94,6 +134,38 @@ const processCSV = (filePath = "", mainKey) => {
     })
     return data;
 }
+const processDish = (path, medidas, nutritionalData) => {
+    let key = '';
+    let receta = process(path);
+    // console.log(receta)
+    // console.log(medidas)
+    let ingredientes = {};
+    receta.nutricionalInformation.forEach(ingredient => {
+        let [cantidad, medidaKey, ingrediente] = ingredient.split('*');
+        if(cantidad.includes('〰') || ingrediente === '') return; // si es opcional
+        
+        let medida = medidas[medidaKey];
+        let nutData = nutritionalData[ingrediente]
+        if(!nutData) return; // si no encuentra el ingrediente
+        let nutrientes = nutData.nutrients;
+
+        Object.keys(nutrientes).forEach( nutKey => {
+            let nutXgram = nutrientes[nutKey]/nutData.g;
+            nutrientes[nutKey] = nutXgram*medida.g*cantidad;
+            if(nutrientes[nutKey] === 0) delete nutrientes[nutKey]
+        })
+
+        nutrientes = nutrientes
+        ingredientes[ingrediente] = nutrientes;
+        // return {[ingrediente]:nutrientes};
+    })
+    receta.nutricionalInformation = ingredientes;
+    receta.content = receta.content.join('\n\n')
+    // let informaciónNutrimental = Object.values(nutrientes)
+    //console.log(receta)
+    return receta;
+}
+
 
 const main = async () => {
 
@@ -128,39 +200,19 @@ const main = async () => {
         delete nutritionalData[nutrientKey].nutrients[gKey]
     })
     // console.log(nutritionalData);
-    let recetas = processCSV(getLink(mdFile, 'Recetasdelamor'));
-    
-    let receta = process('./tests/Crema de champiñones bf43549a6fbe44b69f1795a295950e9e.md');
-    // console.log(receta)
-    // console.log(medidas)
-    let ingredientes = {
-        [key]: {
-            [key]: 0
-        }
-    };
-    receta.nutricionalInformation.forEach(ingredient => {
-        let [cantidad, medidaKey, ingrediente] = ingredient.split('*');
-        if(cantidad.includes('〰')) return; // si es opcional
-        
-        let medida = medidas[medidaKey];
-        let nutData = nutritionalData[ingrediente]
-        if(!nutData) return; // si no encuentra el ingrediente
-        let nutrientes = nutData.nutrients;
+    let recetasLink = getLink(mdFile, 'Recetasdelamor');
+    //let recetas = processCSV(recetasLink);
+    let parsed = parse(recetasLink);
 
-        Object.keys(nutrientes).forEach( nutKey => {
-            let nutXgram = nutrientes[nutKey]/nutData.g;
-            nutrientes[nutKey] = nutXgram*medida.g*cantidad;
-            if(nutrientes[nutKey] === 0) delete nutrientes[nutKey]
-        })
+    let recetasDir = join(base, dir, parsed.dir, parsed.name);
+    let recetas = readdirSync(recetasDir);
+    let recetasData = recetas.map( recetaPath => processDish(join(recetasDir, recetaPath), medidas, nutritionalData))
+    
+    recetasData = recetasData.filter(receta => receta.lito === "Yes");
 
-        nutrientes = nutrientes
-        ingredientes[ingrediente] = nutrientes;
-        // return {[ingrediente]:nutrientes};
-    })
-    
-    // let informaciónNutrimental = Object.values(nutrientes)
-    console.log(ingredientes)
-    
+    let json = `export const dishesData =${JSON.stringify(recetasData, null, 2)}`
+    writeFileSync(dishesDataPath, json);
+    console.log(json)
 }
 
 main();
