@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-import { dishesData } from '../../data/dishes.js'
+import { dishesData } from '../../../data/dishes.js'
 import DishItem from './DishItem.js';
 
 function DishesList({filters = {}, prefix = ""}) {
@@ -18,18 +18,13 @@ function DishesList({filters = {}, prefix = ""}) {
         }else{
             setDishList(dishesData);
         }
-        /*
-        return () => {
-            cleanup
-        }
-        */
     }, [prefix])
 
     return (
         <div>
             {
                 DishList.map( dish => (
-                    <DishItem key={dish.title} dishData={dish}/>
+                    <DishItem showImg={false} key={dish.title} dishData={dish}/>
                 ))
             }
         </div>

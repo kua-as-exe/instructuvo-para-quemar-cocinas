@@ -1,0 +1,7 @@
+.codex-editor__redactor{
+    padding-bottom: 0px !important;
+}
+
+.ce-block--focused{
+    background-color: rgba(0, 0, 0, 0.05);
+}

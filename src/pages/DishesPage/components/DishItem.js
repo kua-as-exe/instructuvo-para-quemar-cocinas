@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Container, Columns, Heading, Content, Image, Tag } from '../../components/shared/Bluma'
+import { Container, Columns, Heading, Content, Image, Tag, Card, Box } from '../../../components/shared/Bluma'
 
-import { dishesData } from '../../data/dishes.js'
+import { Link, useRouteMatch } from "react-router-dom";
 
-function DishItem({dishData = dishesData[0]}) {
+function DishItem({dishData, showImg = true}) {
+    let match = useRouteMatch();
+    const urlLink = `recetas/${dishData.url}`;
+
     const getTags = () => 
         dishData.tags.map( tag => (
             <Tag key={tag}>{tag}</Tag>
@@ -13,15 +16,18 @@ function DishItem({dishData = dishesData[0]}) {
     
 
     return (
-        <Container className="animate__animated animate__fadeIn animate__faster">
+        <Box>
+        <Container className="">
             <Columns>
-                <Columns.Column size={3}>
-                   <Image 
-                        src={dishData.img.url}
-                        size='4by3'
-                        ></Image>
+                {showImg && <Columns.Column size={3}>
+                    <Link to={urlLink}>
+                    <Image 
+                            src={dishData.img.url}
+                            size='4by3'
+                            ></Image>
 
-                </Columns.Column>
+                    </Link>
+                </Columns.Column>}
                 <Columns.Column size={9}>
                     <Content>
                         <Heading style={{'marginBottom': '0px'}} size={5}>{dishData.title}</Heading>
@@ -29,8 +35,7 @@ function DishItem({dishData = dishesData[0]}) {
                             {dishData.author}
                         </Heading>
                         <p>{dishData.description}</p>
-                        <small>{dishData.fecha}</small>
-                        <br/>
+                        {/* <small>{dishData.fecha}</small> */}
                         <Tag.Group>
                             {getTags()}
                         </Tag.Group>
@@ -39,6 +44,7 @@ function DishItem({dishData = dishesData[0]}) {
                 </Columns.Column>
             </Columns>
         </Container>
+        </Box>
     )
 }
 

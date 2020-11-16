@@ -1,72 +1,35 @@
-import React, {useState} from 'react'
-import { Section, Container, Box, Columns, Heading } from '../../components/shared/Bluma'
-import DishesList from './DishesList';
-//const { Input, Field, Control, Label } = Form;
+import React from 'react'
 
-import { FaSearch } from 'react-icons/fa';
+import Search from './components/Search';
+import { dishesData } from '../../data/dishes.js'
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams,
+    Redirect
+  } from "react-router-dom";
+import DishPage from '../DishPage/DishPage';
 
 export default function HomePage() {
-
-    const [searchPrefix, changeSearchPrefix] = useState("")
-
-    const handleKeyPress = (e) => {
-        if(e.which === 13){
-            console.log(searchPrefix);
-        }
-    }
-    const handleChange = (e) => {
-        changeSearchPrefix(e.target.value);
-    }
-
-    const searchBox = () => (
-        <div className="field">
-            <div className="control has-icons-left">
-                <input 
-                    className="input is-large" 
-                    onChange={handleChange}
-                    onKeyPress={handleKeyPress}
-                    type="text" 
-                    placeholder="Buscar"/>
-
-                <span className="icon is-left">
-                    {/**<i className="fas fa-envelope fa-sm"></i>**/}
-                    <FaSearch/>
-                </span>
-            </div>
-        </div>
-    )
+    let match = useRouteMatch();
 
     return (
-       <Section>
-            <Container>
-                <Columns>
-                    <Columns.Column size={3}>
-                        <Box>
-                            <Heading size={4}>Recetas</Heading>
-                        </Box>
-                    </Columns.Column>
-                    <Columns.Column size={9}>
-                        
-                            {searchBox()}
-                        
-                    </Columns.Column>
-                </Columns>
-            </Container>
-            <Container>
-                <Columns>
-                    <Columns.Column size={3}>
-                        <Box>
-                            <h1>Ola</h1>
-                        </Box>
-                    </Columns.Column>
-                    <Columns.Column size={9}>
-                        <Box>
-                            <DishesList prefix={searchPrefix}/>
-                        </Box>
-                    </Columns.Column>
-                </Columns>
-            </Container>
-        </Section>
+        
+        <Switch>
+            {dishesData.map( (route) => 
+                <Route 
+                    key={route.url} 
+                    strict={true}
+                    path={`${match.path}/${route.url}`}
+                    component={DishPage}/>
+            )}
+            <Route exact={true} path={`${match.path}`} component={Search}/>
+            <Redirect to="/recetas" />
+        </Switch>
+        
     )
 }

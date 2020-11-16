@@ -7,7 +7,7 @@ import {
   } from "react-router-dom";
 
 const link = (text, route) => (
-    <NavLink key={text} to={route} className="navbar-item">
+    <NavLink key={text} to={route} className="navbar-item" activeClassName="has-text-white">
         {text}
     </NavLink>
 );
@@ -19,14 +19,17 @@ export default function NavbarComponent({routes}) {
         <Navbar>
             <Navbar.Brand>
                 <Link to="/" className="navbar-item">
-                    <img className="logo" src="/logo.png" alt="Logo" width="28" height="28"/>
+                    <img className="logo" src="/favicon.png" alt="Logo" width="28" height="28"/>
                     <span><b>Instructivo para quemar cocinas</b></span>
                 </Link>
             </Navbar.Brand>
 
             <Navbar.Menu>
                 <Navbar.Container>
-                    {routes.map( route => link(route.text, route.path))}
+                    {routes
+                        .filter( route => (route.navbarVisible !== false) )
+                        .map( route => link(route.text, route.path) )
+                    }
                 </Navbar.Container>
             </Navbar.Menu>
         </Navbar>

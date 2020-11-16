@@ -40,7 +40,7 @@ export default function Tiles() {
                         data: '@jorgitoarroelas',
                     }}>
                     Delociosos tamales de elote natural para toda la familia. <a>@Natural</a>.
-                    <a href="#1">#Tamales</a> <a href="#2">#Elote</a>
+                    <a>#Tamales</a> <a>#Elote</a>
 
                 </CardComponent>
               </Tile>
@@ -49,7 +49,7 @@ export default function Tiles() {
             <Tile kind="parent">
               <Tile renderAs="article" kind="child" notification color="danger">
                 <Heading>Coso ancho para poner cosos anchos</Heading>
-                <Heading subtitle>Ola teamo &#127809;</Heading>
+                <Heading subtitle>Ola teamo <span role="img" aria-label="leaf emoji">&#127809;</span></Heading>
                 <div className="content" />
               </Tile>
             </Tile>

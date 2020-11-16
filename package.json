@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/embed": "^2.4.0",
+    "@editorjs/header": "^2.6.0",
+    "@editorjs/image": "^2.6.0",
+    "@editorjs/inline-code": "^1.3.1",
+    "@editorjs/link": "^2.3.1",
+    "@editorjs/list": "^1.6.0",
+    "@editorjs/marker": "^1.2.2",
+    "@editorjs/quote": "^2.4.0",
+    "@editorjs/raw": "^2.2.0",
+    "@editorjs/simple-image": "^1.4.0",
+    "@editorjs/table": "^1.3.0",
+    "@editorjs/warning": "^1.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -12,14 +25,17 @@
     "react-bulma-components": "^3.4.0",
     "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",
+    "react-markdown": "^5.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "remark-gfm": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "papas": "node ./tests/convert.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@editorjs/editorjs": "^2.19.0",
+    "@editorjs/paragraph": "^2.8.0",
+    "react-editor-js": "^1.6.2"
   }
 }
