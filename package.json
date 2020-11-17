@@ -27,16 +27,18 @@
     "react-markdown": "^5.0.2",
     "react-responsive": "^8.1.1",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.2.2",
     "react-scripts": "3.4.3",
     "remark-gfm": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "build-deploy": "react-scripts build && firebase deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "papas": "node ./tests/convert.js",
-    "css-build": "node-sass --omit-source-map-url src/scss/App.scss src/App.css",
+    "css-build": "node-sass --omit-source-map-url src/css/App.scss src/css/App.css",
     "css-watch": "npm run css-build -- --watch"
   },
   "eslintConfig": {

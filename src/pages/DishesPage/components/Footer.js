@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <footer class="footer">
-            <div class="content has-text-centered">
+        <footer className="footer">
+            <div className="content has-text-centered">
                 <p>
                     <strong>Instructivo Para Quemar Cocinas</strong> con mucho cariño por <a>Liz Juarez</a> y <a>Jorge Arreola</a>
                 </p>

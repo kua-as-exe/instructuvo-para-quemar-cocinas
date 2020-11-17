@@ -30,14 +30,18 @@ export default function HomePage({history}) {
         }
     }
     const handleChange = (e) => changeSearchPrefix(e.target.value);
-    const handleSelect = (dishData) => {
-        const urlLink = `/recetas/${dishData.url}`;
-        history.push(urlLink);
-        receta.current.scrollIntoView({
+
+    const goTop = () => {
+        if(receta.current) receta.current.scrollIntoView({
             behaviour: 'smooth',
             block: 'start',
             inline: 'center',
         });
+    }
+    const handleSelect = (dishData) => {
+        const urlLink = `/recetas/${dishData.url}`;
+        history.push(urlLink);
+        goTop();
         changeListVisible(false);
     }
 
@@ -87,6 +91,10 @@ export default function HomePage({history}) {
                         <div className="box">
                             <Switch>
                                 {/* {console.log(dishesData)} */}
+                                <Route path='/recetas/fromHome'>
+                                    {goTop()}
+                                    <Redirect to="/recetas"/>
+                                </Route>
                                 <Route path='/recetas/:id' component={DishPage}/>
                                 <Route exact path='/recetas' component={DishesHome}/>
 

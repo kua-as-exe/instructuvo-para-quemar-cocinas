@@ -1,6 +1,6 @@
 import React from 'react';
-import 'react-bulma-components/dist/react-bulma-components.min.css';
-import './App.css';
+import './css/App.css';
+import './css/bulmaswatch.min.css';
 
 import {
   BrowserRouter as Router,
@@ -23,9 +23,9 @@ function App() {
         <Switch>
           {routes.map( (route) => 
             <Route 
-              key={route.path} 
-              path={route.path} 
-              component={route.component}/>
+            key={route.path} 
+            path={route.path} 
+            component={route.component}/>
           )}
         </Switch>
 
