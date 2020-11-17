@@ -10,14 +10,7 @@ export const routes = [
         text: 'Recetas',
         path: '/recetas',
         component: DishesPage,
-    },
-    {
-
-        
-        text: 'Receta',
-        path: '/receta',
-        component: DishPage,
-        navbarVisible: false
+        navbarVisible: true
     },
     {
         text: 'Tips',

@@ -49,5 +49,5 @@ DishItem.propTypes = {
     dishData: PropTypes.object
 }
 
-export default React.memo(DishItem, ()=>true)
+export default React.memo(DishItem, ()=> true)
 

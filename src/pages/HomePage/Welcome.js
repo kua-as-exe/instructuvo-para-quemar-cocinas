@@ -41,7 +41,7 @@ export default function Welcome() {
                     </div>
                     <div className={`column is-${columnSize}`}>
                         <p className="title is-1">Acompáñame</p>
-                        <Link className="button is-primary is-medium" to="/recetas/fromHome">Vamos!</Link>
+                        <Link className="button is-primary is-medium" to="/recetas/inicio">Vamos!</Link>
                         <p className="is-7 p-3">- Liz Juarez</p>
                     </div>
                 </div>

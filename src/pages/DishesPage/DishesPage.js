@@ -17,8 +17,10 @@ import DishPage from '../DishPage/DishPage';
 import { FaSearch } from 'react-icons/fa';
 import DishesList from './components/DishesList';
 import DishesHome from './components/DishesHome';
+import ReactGA from 'react-ga';
 
-export default function HomePage({history}) {
+function HomePage({history}) {
+    console.log("A")
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");
     const [listVisible, changeListVisible] = useState(false);
@@ -53,7 +55,6 @@ export default function HomePage({history}) {
                     onChange={handleChange}
                     onKeyPress={handleKeyPress}
                     onFocus={ () => changeListVisible(true)}
-                    // onBlur={()=>setTimeout(changeListVisible(false),1000)}
                     type="text" 
                     placeholder="Buscar"/>
 
@@ -91,7 +92,7 @@ export default function HomePage({history}) {
                         <div className="box">
                             <Switch>
                                 {/* {console.log(dishesData)} */}
-                                <Route path='/recetas/fromHome'>
+                                <Route exact path='/recetas/inicio'>
                                     {goTop()}
                                     <Redirect to="/recetas"/>
                                 </Route>
@@ -106,3 +107,5 @@ export default function HomePage({history}) {
         </section>
     )
 }
+
+export default React.memo(HomePage, ()=>true)

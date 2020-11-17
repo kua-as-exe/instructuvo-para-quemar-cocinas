@@ -2,8 +2,10 @@ import React from 'react'
 import { Container, Section, Box, Hero, Heading } from './../../components/shared/Bluma';
 import Tiles from './Tiles';
 import Welcome from './Welcome';
+import ReactGA from 'react-ga';
 
 export default function HomePage() {
+    ReactGA.pageview('/');
     return (
         <Section>
             <Container>
