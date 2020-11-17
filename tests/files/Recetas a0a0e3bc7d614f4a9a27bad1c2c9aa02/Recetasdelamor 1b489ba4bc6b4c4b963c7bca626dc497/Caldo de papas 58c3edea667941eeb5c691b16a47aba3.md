@@ -1,7 +1,11 @@
 # Caldo de papas
 
-Autor: Elisabet Juárez
+Autor: Elisabet Juarez
+Descripción: ¿Papas otra vez? Renueva tu receta haciéndola de una manera diferente
 Lito: Yes
+Personas: 6
+Tags: Caldo de pollo, Caliente, Papas, Sopa
+TiempoAprox: 25-30 minutos
 
 ## Ingredientes
 

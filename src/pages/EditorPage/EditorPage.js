@@ -18,9 +18,9 @@ export default function EditorPage() {
     })
 
     const handleSave = async () => {
-        console.log(editorInstance)
+        // console.log(editorInstance)
         setdata(await editorInstance.save());
-        console.log(data);
+        // console.log(data);
     }
 
     return (

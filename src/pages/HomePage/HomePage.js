@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Section, Box, Hero, Heading } from './../../components/shared/Bluma';
 import Tiles from './Tiles';
+import Welcome from './Welcome';
 
 export default function HomePage() {
     return (
@@ -19,8 +20,7 @@ export default function HomePage() {
                     </Hero.Body>
                 </Hero>
                 <Box>
-
-                    <Tiles/>
+                <Welcome/>
 
                 </Box>
             </Container>

@@ -12,6 +12,7 @@ import {
 import NavbarComponent from './components/shared/Navbar';
 
 import {routes} from './router';
+import Footer from './pages/DishesPage/components/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         </Switch>
 
       </Router>
+      <Footer/>
     </div>
   );
 }

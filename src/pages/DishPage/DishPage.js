@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import EditorJs from 'react-editor-js';
 
-import { Redirect, useParams, useRouteMatch, withRouter } from 'react-router-dom';
+import { Redirect, useLocation, useParams, useRouteMatch, withRouter } from 'react-router-dom';
 import { dishesData } from './../../data/dishes';
 import { Box, Columns, Container, Content, Heading, Tag, Tile } from '../../components/shared/Bluma';
 import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
-
-const get_random = function (list) {
-    return list[Math.floor((Math.random()*list.length))];
-  } 
+import { random, tagsColors } from '../../utils/utils';
+import { gifsData } from '../../data/gifs';
   
 const noContentFrases = [
     'BUSCA OTRA O PREGUNTALE A LA ABUE 👵',
@@ -20,13 +18,13 @@ const noContentFrases = [
 function DishPage() {
     let { id } = useParams();
     let dishData = dishesData.find( dish => dish.url === id);
-    console.log(dishData);
+    
     if(!dishData)
         return <Redirect to="/recetas/"/>
 
     const getTags = () => 
         dishData.tags && dishData.tags.map( tag => (
-            <Tag key={tag}>{tag}</Tag>
+            <span key={tag} className={`tag ${random(tagsColors)}`} >{tag}</span>
         ))
 
     const getInfo = () => (
@@ -79,14 +77,27 @@ function DishPage() {
                 <div className="hero-body">
                     <div className="container">
                         <Heading size={3}>Wops!</Heading>
-                        <Heading size={4}>Parece que aún no hay procedimiento para esta receta {get_random(surpriseEmoji)} </Heading>
+                        <Heading size={4}>Parece que aún no hay procedimiento para esta receta {random(surpriseEmoji)} </Heading>
                         <Heading subtitle size={5}>Nimodo!</Heading>
-                        <Heading subtitle size={4}>{get_random(noContentFrases).toLowerCase()}</Heading>
+                        <Heading subtitle size={4}>{random(noContentFrases).toLowerCase()}</Heading>
                     </div>
                 </div>
             </section>
             </div>
     )
+
+    const Gif = () => {
+        let {text, url} = random(gifsData)
+        // console.log(text, url)
+        return (
+            <div className="p-3 content is-active is-align-content-center disable-select">
+                <figure className="is-fullwidth mt-0">
+                    <p className="title is-4 has-text-centred"><em>{text}</em></p>
+                    <img src={url} alt={text}/>
+                </figure>
+            </div>
+        )
+    }
 
     const Receta = () => (
         <>
@@ -104,9 +115,15 @@ function DishPage() {
                     </div>
             </section>
         
-            <section className="hero animate__animated animate__fadeIn animate__fast">
+            <section className="hero">
                 <div className="content container ml-2 mr-2">
                     {(dishData.content && dishData.contentType)? receta() : noReceta() }
+                </div>
+            </section>
+            
+            <section>
+                <div className="container">
+                    <Gif/>
                 </div>
             </section>
         </>

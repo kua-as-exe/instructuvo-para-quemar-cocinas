@@ -7,6 +7,7 @@ const hideMetadata = false;
 const base = 'tests'
 const dir = 'files';
 const dishesDataPath = 'src/data/dishes.js';
+const gifsDataPath = 'src/data/gifs.js';
 
 const getMarkdown = ( filePath ) => {
     let mdString = readFileSync(filePath).toString()
@@ -70,6 +71,11 @@ const process = (filePath) => {
         data.nutricionalInformation = nutInfo.split('\n');
         delete md[nutInfoItem];
         delete md[nutInfoItem+1];
+    }
+    const tipsIndex = md.findIndex( (text) => text == '## Tips');
+    if(tipsIndex !== -1 && md[tipsIndex+1] != ''){
+        delete md[tipsIndex];
+        delete md[tipsIndex+1];
     }
     data.aproxTime = extractInline(md, ['Tiempo de preparación', 'Tiempo de preparación:']);
     data.capacity = extractInline(md, ['Capacidad', 'Capacidad:']);
@@ -212,7 +218,25 @@ const main = async () => {
 
     let json = `export const dishesData =${JSON.stringify(recetasData, null, 2)}`
     writeFileSync(dishesDataPath, json);
-    console.log(json)
+    // console.log(json)
+
+    let gifsLink = getLink(mdFile, 'ParaMatarElTiempo')
+    
+
+    let gifsData = readFileSync(join(base, dir, gifsLink)).toString().replace(/\r/g, '').split("\n");
+    
+    let gifs = [ {text: '', url: ''} ]
+    gifs = [];
+
+    gifsData.shift() // remove first (0)
+    gifs = gifsData.map( d => {
+        let [x, url, ...text] = d.split(',');
+        text = text.join(' ');
+        return {text, url };
+    })
+    
+    writeFileSync(gifsDataPath, `export const gifsData =${JSON.stringify(gifs, null, 2)}`);
+    // console.log(gifs)
 }
 
 main();

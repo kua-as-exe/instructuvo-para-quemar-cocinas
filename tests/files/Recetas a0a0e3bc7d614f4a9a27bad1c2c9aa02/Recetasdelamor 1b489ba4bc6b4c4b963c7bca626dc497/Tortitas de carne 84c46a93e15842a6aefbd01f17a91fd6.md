@@ -1,7 +1,11 @@
 # Tortitas de carne
 
-Autor: Elisabet Juárez
+Autor: Elisabet Juarez
+Descripción: Para una hamburguesa, para una comida, de varios tamaños y haciéndola sencilla
 Lito: Yes
+Personas: 8
+Tags: Carne, Hamburguesa, Zanahoria
+TiempoAprox: 30 minutos
 
 ## Ingredientes
 

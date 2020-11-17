@@ -1,8 +1,11 @@
 # Crema de champiñones
 
-Autor: Elisabet Juárez
+Autor: Elisabet Juarez
+Descripción: Unos hongos cremosos que no lo podías imaginar
 Lito: Yes
-Tags: Champiñones
+Personas: 6
+Tags: Caliente, Champiñones, Crema, Sopa
+TiempoAprox: 15-20 minutos
 
 ## Ingredientes
 

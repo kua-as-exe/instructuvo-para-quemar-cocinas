@@ -1,8 +1,11 @@
 # Crema de zanahoria
 
-Autor: Elisabet Juárez
-Descripción: zanahoria
+Autor: Elisabet Juarez
+Descripción: Zanahorias con un toque cremosito y salado
 Lito: Yes
+Personas: 6
+Tags: Caliente, Crema, Sopa, Zanahoria
+TiempoAprox: 15-20 minutos
 
 ## Ingredientes
 

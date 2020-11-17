@@ -1,23 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { random, tagsColors } from '../../../utils/utils';
 import { Container, Columns, Heading, Content, Image, Tag, Card, Box } from '../../../components/shared/Bluma'
 
-import { Link, useRouteMatch } from "react-router-dom";
-
-function DishItem({dishData, showImg = true, showAuthor = true}) {
-    let match = useRouteMatch();
-    const urlLink = `/recetas/${dishData.url}`;
+function DishItem({dishData, showImg = true, showAuthor = true, select = ()=>{}}) {
+    
     const getTags = () => 
         dishData.tags.map( tag => (
-            <Tag key={tag}>{tag}</Tag>
+            <div className={`tag ${random(tagsColors)}`} key={tag}>{tag}</div>
         ))
     
 
     return (
-        <Box>
-            <Link to={urlLink}>
-        <Container className="">
+        <a className="box" >
+        <div className="container" onClick={()=>select(dishData)}>
             <Columns>
                 {showImg && <Columns.Column size={3}>
                     
@@ -28,7 +25,7 @@ function DishItem({dishData, showImg = true, showAuthor = true}) {
 
                     
                 </Columns.Column>}
-                <Columns.Column size={9}>
+                <Columns.Column>
                     <Content>
                         <Heading style={{'marginBottom': '0px'}} size={5}>{dishData.title}</Heading>
                         {showAuthor && <Heading subtitle size={6} renderAs="span">
@@ -43,9 +40,8 @@ function DishItem({dishData, showImg = true, showAuthor = true}) {
                     </Content>
                 </Columns.Column>
             </Columns>
-        </Container>
-        </Link>
-        </Box>
+        </div>
+        </a>
     )
 }
 

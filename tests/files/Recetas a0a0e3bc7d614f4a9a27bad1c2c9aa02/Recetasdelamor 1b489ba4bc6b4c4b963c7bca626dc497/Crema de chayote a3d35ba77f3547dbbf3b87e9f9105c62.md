@@ -1,7 +1,11 @@
 # Crema de chayote
 
-Autor: Elisabet Juárez
+Autor: Elisabet Juarez
+Descripción: Una verdura que tiene espinitas haciendola caldo
 Lito: Yes
+Personas: 6
+Tags: Caliente, Chayote, Crema, Sopa
+TiempoAprox: 15-25 minutos
 
 ## Ingredientes
 

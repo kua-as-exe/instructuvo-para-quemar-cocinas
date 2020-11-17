@@ -16,7 +16,7 @@ function DishesList({filters = {}, prefix = "", select = ()=>{}}) {
         if(prefix !== ""){
             prefix = removeAccents(prefix.toLowerCase());
             let words = prefix.split(' ');
-            console.log(words)
+            // console.log(words)
             let dishes =  dishesData.map( dish => {
                 let points = 0;
                 let title = dish.title.toLowerCase();

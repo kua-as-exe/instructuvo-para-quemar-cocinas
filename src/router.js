@@ -22,13 +22,31 @@ export const routes = [
     {
         text: 'Tips',
         path: '/tips',
-        component: ()=>(<h1>Tips</h1>)
+        component: ()=>(
+            <section class="hero is-primary is-medium">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <h1 class="title">
+                            Próximamente
+                        </h1>
+                        <h2 class="subtitle">
+                            Ideas que mejorarán tu vida
+                        </h2>
+                    </div>
+                </div>
+                <div class="hero-foot mb-3">
+                    <div class="container has-text-centered">
+                        <p>Apoyanos compartiendo para motivarnos a seguir desarrollando este proyecto 👻</p>
+                    </div>
+                </div>
+            </section>
+        )
     },
     {
         text: 'Editor',
         path: '/editor',
         component: EditorPage,
-        navbarVisible: true
+        navbarVisible: false
     },
     {
         text: 'Instructivo para quemar cocinas',

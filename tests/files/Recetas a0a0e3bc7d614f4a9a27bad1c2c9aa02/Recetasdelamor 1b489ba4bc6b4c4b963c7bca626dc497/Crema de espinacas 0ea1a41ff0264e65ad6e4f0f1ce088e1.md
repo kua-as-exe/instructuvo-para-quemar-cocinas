@@ -1,7 +1,11 @@
 # Crema de espinacas
 
-Autor: Elisabet Juárez
+Autor: Elisabet Juarez
+Descripción: Espinaca batida con leche. Una crema muy cremosa
 Lito: Yes
+Personas: 6
+Tags: Caliente, Crema, Espinaca, Sopa
+TiempoAprox: 15-20 minutos
 
 ## Ingredientes
 
