@@ -1,4 +1,9 @@
 @charset "utf-8";
 
 @import "../../node_modules/bulma/bulma.sass";
+
+.navbar-menu.is-active {
+    margin-top: -1rem;
+}
+
 // @import url("./bulmaswatch.min.css");

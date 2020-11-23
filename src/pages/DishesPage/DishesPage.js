@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useReducer, useState } from 'react'
 
 import Search from './components/Search';
 import { dishesData } from '../../data/dishes.js'
@@ -20,7 +20,6 @@ import DishesHome from './components/DishesHome';
 import ReactGA from 'react-ga';
 
 function HomePage({history}) {
-    console.log("A")
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");
     const [listVisible, changeListVisible] = useState(false);
@@ -31,7 +30,7 @@ function HomePage({history}) {
             // console.log(searchPrefix);
         }
     }
-    const handleChange = (e) => changeSearchPrefix(e.target.value);
+    const handleChange = (e) => changeSearchPrefix(e.target.value)
 
     const goTop = () => {
         if(receta.current) receta.current.scrollIntoView({
@@ -65,6 +64,11 @@ function HomePage({history}) {
         </div>
     );
 
+    const analytics = React.useMemo( () => {
+        // console.log("Analiticas")
+        ReactGA.pageview('/recetas')
+    }, [])
+
     return (
         <section className="section" ref={receta} id="inicio" >
             <div className="container">
@@ -94,6 +98,7 @@ function HomePage({history}) {
                                 {/* {console.log(dishesData)} */}
                                 <Route exact path='/recetas/inicio'>
                                     {goTop()}
+                                    {analytics}
                                     <Redirect to="/recetas"/>
                                 </Route>
                                 <Route path='/recetas/:id' component={DishPage}/>
@@ -108,4 +113,8 @@ function HomePage({history}) {
     )
 }
 
-export default React.memo(HomePage, ()=>true)
+export default HomePage;
+// export default React.memo( HomePage, (a, b)=>{
+//     console.log(a, b)
+//     return true
+// })

@@ -36,16 +36,11 @@ function DishesList({filters = {}, prefix = "", select = ()=>{}}) {
                 return dish;
             }).filter( dish => dish.points > 0)
             dishes = dishes.sort((dishA, dishB)=> {
-                if (dishA.points < dishB.points) {
-                    return 1;
-                  }
-                  if (dishA.points > dishB.points) {
-                    return -1;
-                  }
-                  // a must be equal to b
-                  return 0;
+                if (dishA.points < dishB.points) return 1;
+                if (dishA.points > dishB.points) return -1;
+                return 0;
             })
-            dishes.forEach( dish => console.log(dish.title, dish.points))
+            // dishes.forEach( dish => console.log(dish.title, dish.points))
             setDishList(dishes);
             //DishList.forEach(dish => console.log(dish.title, dish.points));
         }else{
@@ -64,6 +59,9 @@ function DishesList({filters = {}, prefix = "", select = ()=>{}}) {
         ))}
     	{DishList.length === 1 && 
             <Redirect to={'/recetas/'+DishList[0].url}/>
+        }
+        {DishList.length === 0 && 
+            <h1>No hay no existe</h1>
         }
     </>
 }

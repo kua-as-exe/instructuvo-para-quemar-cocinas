@@ -5,35 +5,25 @@ import DishesPage from './pages/DishesPage/DishesPage';
 import DishPage from './pages/DishPage/DishPage';
 import EditorPage from './pages/EditorPage/EditorPage';
 
+import TipsPage from './pages/TipsPage/TipsPage';
+
 export const routes = [
     {
-        text: 'Recetas',
+        text: 'Recetas XD',
         path: '/recetas',
+        component: DishesPage,
+        navbarVisible: false
+    },
+    {
+        text: 'Recetas',
+        path: '/recetas/inicio',
         component: DishesPage,
         navbarVisible: true
     },
     {
         text: 'Tips',
         path: '/tips',
-        component: ()=>(
-            <section class="hero is-primary is-medium">
-                <div class="hero-body">
-                    <div class="container has-text-centered">
-                        <h1 class="title">
-                            Próximamente
-                        </h1>
-                        <h2 class="subtitle">
-                            Ideas que mejorarán tu vida
-                        </h2>
-                    </div>
-                </div>
-                <div class="hero-foot mb-3">
-                    <div class="container has-text-centered">
-                        <p>Apoyanos compartiendo para motivarnos a seguir desarrollando este proyecto 👻</p>
-                    </div>
-                </div>
-            </section>
-        )
+        component: TipsPage
     },
     {
         text: 'Editor',

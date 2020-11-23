@@ -21,21 +21,22 @@ function DishPage() {
     
     if(!dishData)
         return <Redirect to="/recetas/"/>
-
-    const getTags = () => 
-        dishData.tags && dishData.tags.map( tag => (
-            <span key={tag} className={`tag ${random(tagsColors)}`} >{tag}</span>
-        ))
+         
+    const Tags = React.memo(() => 
+        dishData.tags && <Tag.Group>
+            {dishData.tags.map( tag => (
+                <span key={tag} className={`tag ${random(tagsColors)}`} >{tag}</span>
+            ))}
+        </Tag.Group>
+    , ()=>true)
 
     const getInfo = () => (
             <div className="content is-medium">
                 {dishData.fecha && <h2 className="subtitle is-4">{dishData.fecha}</h2>}
                 <h1 className="title">{dishData.title}</h1>
-                {dishData.author && <h2 className="subtitle is-6">{dishData.author}</h2>
-}                <p>{dishData.description}</p>
-                <Tag.Group>
-                    {getTags()}
-                </Tag.Group>
+                {dishData.author && <h2 className="subtitle is-6">{dishData.author}</h2>}
+                <p>{dishData.description}</p>
+                <Tags/>
             </div>
         )
     
