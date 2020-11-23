@@ -9,6 +9,7 @@ import { Box, Columns, Container, Content, Heading, Tag, Tile } from '../../comp
 import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
 import { random, tagsColors } from '../../utils/utils';
 import { gifsData } from '../../data/gifs';
+import eastereggs, { recetasEastereggs } from '../DishesPage/eastereggs';
   
 const noContentFrases = [
     'BUSCA OTRA O PREGUNTALE A LA ABUE 👵',
@@ -17,6 +18,18 @@ const noContentFrases = [
 
 function DishPage() {
     let { id } = useParams();
+
+    if(recetasEastereggs[id])
+        return (
+            <div className="container">
+                <div className="p-3 content is-active is-align-content-center disable-select">
+                    <figure className="is-fullwidth mt-0">
+                        {recetasEastereggs[id]}
+                    </figure>
+                </div>
+            </div>
+        )
+
     let dishData = dishesData.find( dish => dish.url === id);
     
     if(!dishData)
@@ -103,17 +116,17 @@ function DishPage() {
     const Receta = () => (
         <>
          <section className="mb-5">
-                    <div className="container">
-                        {/**toolbar()**/}
-                        <div className="columns is-6">
-                            { dishData.img && dishData.img.url && <div className="column is-6">
-                                {getImg()}
-                            </div>}
-                            <div className="column">
-                                {getInfo()}
-                            </div>
+                <div className="container">
+                    {/**toolbar()**/}
+                    <div className="columns is-6">
+                        { dishData.img && dishData.img.url && <div className="column is-6">
+                            {getImg()}
+                        </div>}
+                        <div className="column">
+                            {getInfo()}
                         </div>
                     </div>
+                </div>
             </section>
         
             <section className="hero">

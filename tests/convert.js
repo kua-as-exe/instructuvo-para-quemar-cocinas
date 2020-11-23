@@ -26,22 +26,7 @@ const toTitleCase = (phrase) => {
 };
 
 const process = (filePath) => {
-    const extractInline = (md = [""], ocurrences = []) => {
-        let text;
-        if(typeof(ocurrences) === 'string')
-            ocurrences = [ocurrences];
-
-        ocurrences.forEach( ocurrence => {  
-            let index = md.findIndex( (text) => text && text.includes(ocurrence));
-            if(index !== -1){
-                let t = md[index];
-                t = t.slice(t.indexOf(ocurrence)+ocurrence.length, t.length).trim();
-                //delete md[index];
-                if(t && t !== '') text = t;
-            }
-        })
-        return text;
-    }
+    
 
     const data = {
         contentType: 'markdown',

@@ -38,7 +38,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "papas": "node ./tests/convert.js",
+    "papas": "node ./tools/convert.js",
     "css-build": "node-sass --omit-source-map-url src/css/App.scss src/css/App.css",
     "css-watch": "npm run css-build -- --watch"
   },

@@ -18,6 +18,7 @@ import { FaSearch } from 'react-icons/fa';
 import DishesList from './components/DishesList';
 import DishesHome from './components/DishesHome';
 import ReactGA from 'react-ga';
+import { recetasEastereggs } from './eastereggs';
 
 function HomePage({history}) {
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
@@ -25,12 +26,20 @@ function HomePage({history}) {
     const [listVisible, changeListVisible] = useState(false);
     const receta = React.useRef(null);
 
-    const handleKeyPress = (e) => {
-        if(e.which === 13){
-            // console.log(searchPrefix);
-        }
+    const handleSelect = (urlOrData = {url: ''}) => {
+        let url = (typeof(urlOrData) === "string")? urlOrData: urlOrData.url
+        const urlLink = `/recetas/${url}`;
+        history.push(urlLink);
+        goTop();
+        changeListVisible(false);
     }
-    const handleChange = (e) => changeSearchPrefix(e.target.value)
+
+    const handleChange = (e) => {
+        if(recetasEastereggs[e.target.value.replace(/ /g, '')])
+            handleSelect(e.target.value.replace(/ /g, ''));
+
+        changeSearchPrefix(e.target.value)
+    }
 
     const goTop = () => {
         if(receta.current) receta.current.scrollIntoView({
@@ -39,12 +48,6 @@ function HomePage({history}) {
             inline: 'center',
         });
     }
-    const handleSelect = (dishData) => {
-        const urlLink = `/recetas/${dishData.url}`;
-        history.push(urlLink);
-        goTop();
-        changeListVisible(false);
-    }
 
     const searchBox = () => (
         <div className="field">
@@ -52,7 +55,7 @@ function HomePage({history}) {
                 <input
                     className="input is-large" 
                     onChange={handleChange}
-                    onKeyPress={handleKeyPress}
+                    // onKeyPress={handleKeyPress}
                     onFocus={ () => changeListVisible(true)}
                     type="text" 
                     placeholder="Buscar"/>
