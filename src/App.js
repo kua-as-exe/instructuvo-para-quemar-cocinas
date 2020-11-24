@@ -14,12 +14,14 @@ import NavbarComponent from './components/shared/Navbar';
 import {routes} from './router';
 import Footer from './components/shared/Footer';
 
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 // history.listen(location => console.log(location));
 function App() {
   useEffect(() => {
     // console.log("GA")
-    ReactGA.initialize('G-251751903'); // Aqui pones tu identificador de cuenta de Google Analytics
+    // ReactGA.initialize('G-251751903'); // Aqui pones tu identificador de cuenta de Google Analytics
+    // ReactGA.initialize('G-H1QW6J6NFJ'); // Aqui pones tu identificador de cuenta de Google Analytics
+    // console.log("A")
   }, [])
 
   return (

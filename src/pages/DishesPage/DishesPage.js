@@ -54,6 +54,7 @@ function HomePage({history}) {
             <div className="control has-icons-left">
                 <input
                     className="input is-large" 
+                    value={searchPrefix}
                     onChange={handleChange}
                     // onKeyPress={handleKeyPress}
                     onFocus={ () => changeListVisible(true)}
@@ -77,7 +78,7 @@ function HomePage({history}) {
             <div className="container">
                 <div className="columns">
                     <div className="column is-full-mobile is-half-tablet is-one-third-desktop is-one-third-widescreen">
-                        <Link className="box" to="/recetas">
+                        <Link className="box" to="/recetas" onClick={()=>changeSearchPrefix('')}>
                             <div className="header title is-4">Recetas</div>
                         </Link>
                     </div>

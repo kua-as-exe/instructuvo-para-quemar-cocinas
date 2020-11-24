@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import { random, tagsColors } from '../../../utils/utils';
 import { Container, Columns, Heading, Content, Image, Tag, Card, Box } from '../../../components/shared/Bluma'
+import { FaClock, FaTimes } from 'react-icons/fa';
 
 function DishItem({dishData, showImg = true, showAuthor = true, select = ()=>{}}) {
     

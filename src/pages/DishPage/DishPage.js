@@ -10,6 +10,7 @@ import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
 import { random, tagsColors } from '../../utils/utils';
 import { gifsData } from '../../data/gifs';
 import eastereggs, { recetasEastereggs } from '../DishesPage/eastereggs';
+import { FaClock } from 'react-icons/fa';
   
 const noContentFrases = [
     'BUSCA OTRA O PREGUNTALE A LA ABUE 👵',
@@ -36,18 +37,18 @@ function DishPage() {
         return <Redirect to="/recetas/"/>
          
     const Tags = React.memo(() => 
-        dishData.tags && <Tag.Group>
+        dishData.tags && <div className="tags mb-0">
             {dishData.tags.map( tag => (
                 <span key={tag} className={`tag ${random(tagsColors)}`} >{tag}</span>
             ))}
-        </Tag.Group>
+        </div>
     , ()=>true)
 
     const getInfo = () => (
-            <div className="content is-medium">
-                {dishData.fecha && <h2 className="subtitle is-4">{dishData.fecha}</h2>}
+        <div className="content is-medium">
                 <h1 className="title">{dishData.title}</h1>
                 {dishData.author && <h2 className="subtitle is-6">{dishData.author}</h2>}
+                <small><FaClock/> {dishData.aproxTime}</small>
                 <p>{dishData.description}</p>
                 <Tags/>
             </div>
@@ -101,13 +102,19 @@ function DishPage() {
     )
 
     const Gif = () => {
-        let {text, url} = random(gifsData)
+        const [gif, setGif] = useState(random(gifsData))
+        let {text, url} = gif;
         // console.log(text, url)
         return (
             <div className="p-3 content is-active is-align-content-center disable-select">
-                <figure className="is-fullwidth mt-0">
+                <figure className="is-fullwidth mt-0 mb-0">
                     <p className="title is-4 has-text-centred"><em>{text}</em></p>
                     <img src={url} alt={text}/>
+                </figure>
+                <figure className="mt-2">
+                    <button 
+                        className="button is-medium is-warning"
+        onClick={()=>setGif(random(gifsData))}>{random(['¡Otro!', 'A ver hechate otro', 'Dime más', '¿Que hay de nuevo viejo?', 'Again!', ':)', 'Otaves'])}</button>
                 </figure>
             </div>
         )
@@ -132,9 +139,10 @@ function DishPage() {
             <section className="hero">
                 <div className="content container ml-2 mr-2">
                     {(dishData.content && dishData.contentType)? receta() : noReceta() }
+                    {dishData.lastChange && <h3 className="subtitle is-6 mt-0 has-text-centered">Última actualización: {new Date(dishData.lastChange).toLocaleDateString()}</h3>}
                 </div>
             </section>
-            
+
             <section>
                 <div className="container">
                     <Gif/>
