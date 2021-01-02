@@ -36,7 +36,7 @@
     "start": "react-scripts start",
     "deploy": "firebase deploy",
     "build": "react-scripts build",
-    "build-deploy": "react-scripts build && npm run deploy",
+    "build-deploy": "npm run papas && react-scripts build && npm run deploy",
     "papas": "node ./tools/convert.js",
     "css-build": "node-sass --omit-source-map-url src/css/App.scss src/css/App.css",
     "css-watch": "npm run css-build -- --watch"

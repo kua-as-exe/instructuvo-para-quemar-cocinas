@@ -102,8 +102,8 @@ function DishPage() {
     )
 
     const Gif = () => {
-        const [gif, setGif] = useState(random(gifsData))
-        let {text, url} = gif;
+        // const [gif, setGif] = useState(random(gifsData))
+        let {text, url} = random(gifsData);
         // console.log(text, url)
         return (
             <div className="p-3 content is-active is-align-content-center disable-select">
@@ -111,11 +111,11 @@ function DishPage() {
                     <p className="title is-4 has-text-centred"><em>{text}</em></p>
                     <img src={url} alt={text}/>
                 </figure>
-                <figure className="mt-2">
+                {/* <figure className="mt-2">
                     <button 
                         className="button is-medium is-warning"
         onClick={()=>setGif(random(gifsData))}>{random(['¡Otro!', 'A ver hechate otro', 'Dime más', '¿Que hay de nuevo viejo?', 'Again!', ':)', 'Otaves'])}</button>
-                </figure>
+                </figure> */}
             </div>
         )
     }

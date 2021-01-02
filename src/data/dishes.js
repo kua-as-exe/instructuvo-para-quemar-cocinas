@@ -1,6 +1,22 @@
 export const dishesData =[
   {
     "contentType": "markdown",
+    "url": "ArrozConLeche",
+    "title": "Arroz con leche",
+    "content": "## Ingredientes\n\n- 1 taza de arroz (lavado y remojado)\n- 4 tazas de agua\n- 1 rajita de canela\n- 1 leche condensada\n- 2 yemas de huevo\n- 1/4 de taza de pasitas\n- 1 cascarita de naranja o limón\n- Canela en polvo al gusto\n\n## Modo de preparación\n\n1. Ponga a cocer el arroz con el agua, la rajita de canela y la cáscara de naranja o limón. \n2. Ya cocido el arroz, retire la cáscara de naranja.\n3. Agregue la leche condensada y las yemas, revolviendo rápidamente para que no se cueza el huevo.\n4. Añada las pasitas y deje hervir por 15 minutos.\n5. Retire del fuego y espolvoree la canela en polvo.\n6. Espere a que enfríe y sirva.\n\n---\n\n> Tiempo de preparación: 30 minutos\n\n> Capacidad: 5 personas\n\n## Tips\n\n> Realizar a fuego medio.",
+    "aproxTime": "30-35 minutos",
+    "tags": [
+      "Dulce",
+      "Postre"
+    ],
+    "description": "Rico postre y fácil de hacer.",
+    "author": "Estefani Jaramillo",
+    "lito": "Yes",
+    "lastChange": "Nov 25, 2020 9:56 AM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
     "url": "Brownies",
     "title": "Brownies",
     "content": "## Ingredientes\n\n- 150g de chocolate negro\n- 250g de mantequilla\n- 250g de azúcar\n- 4 huevos (224g aproximadamente)\n- 50g de chispas de chocolate\n- 50 gramos de nuez\n- 50g de almendra en rodajas\n- 100g de cocoa en polvo\n- 50g de azúcar glass\n- 350g de harina\n- 1 cucharadita de polvo para hornear\n\n## Modo de preparación\n\n1. Derretir la mantequilla con el chocolate hasta que no queden grumos\n2. Batir los huevos con el azúcar, añadir el chocolate con la mantequilla\n3. Añadir la harina tamizada con el polvo para hornear y la cocoa\n4. Mezclar hasta obtener un masa sin grumos y pesada\n5. Agregar las chispas de chocolate, la nuez y las almendras\n6. Mezclar y vaciar en un molde previamente enharinado\n7. Meter al horno previamente precalentado a 180º por 40 minutos o hasta que al insertar un palillo salga limpio\n8. Espolvorear el azúcar glass\n\n---\n\n> ⌛ Tiempo de preparación 1 hora 15 minutos aproximadamente\n\n> 🥞 Capacidad 10 personas\n\n## Tips\n\n> 🔆 Para que las almendras, las chispas de chocolate y la nuez queden crujientes, pasarlas por harina antes",
@@ -51,6 +67,25 @@ export const dishesData =[
     "author": "Elisabet Juarez",
     "lito": "Yes",
     "lastChange": "Nov 22, 2020 8:19 PM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
+    "url": "ConservaDeTejocotes",
+    "title": "Conserva de tejocotes",
+    "content": "## Ingredientes\n\n- 20 tejocotes\n- 1 litro de agua aproximadamente\n- 1 piloncillo\n- 1 rama de canela\n- 4 guayabas\n\n## Modo de preparación\n\n1. Lavar los tejocotes y las guayabas.\n2. Retirar la colita de la guayaba.\n3. En una olla poner los tejocotes junto con el agua hasta que empiece a hervir y retirarlo del fuego.\n4. Pelar los tejocotes retirando la piel.\n5. Partir en rodajas guresas las guayabas.\n6. En la misma olla poner los tejocotes junto con el agua hasta que los tape, agregar las guayabas, el piloncillo y la canela.\n7. Dejar hervir hasta que los tejocotes estén suaves y el piloncillo estédisuelto completamente .\n\n---\n\n> ⌛ Tiempo de preparación 30 minutos\n\n> 🥞 Capacidad 8 personas\n\n## Tips\n\n> 🔆 Clavar un tenedor al tejecote para poder sostenerlo pientras le quitas la cáscara",
+    "aproxTime": "30 minutos",
+    "tags": [
+      "Dulce",
+      "Guayaba",
+      "Navidad",
+      "Piloncillo",
+      "Tejocote"
+    ],
+    "description": "Una conserva navideña para los integrantes de la familia",
+    "author": "Elisabet Juarez",
+    "lito": "Yes",
+    "lastChange": "Nov 23, 2020 5:27 PM",
     "img": {}
   },
   {
@@ -145,6 +180,25 @@ export const dishesData =[
   },
   {
     "contentType": "markdown",
+    "url": "EnsaladaDeEspinaca",
+    "title": "Ensalada de espinaca",
+    "content": "## Ingredientes\n\n- 3 rollos de espinaca\n- 3-4 carambolas\n- 5 pera piña\n- 3 manzana (color a tu preferencia)\n- 80 gr de fresa\n- 50 gr de nuez (en trozos pequeños)\n- 50 gr de arandanos\n- 15 ml de jugo de limon\n- 15 ml de aceite de oliva\n- 3 cucharadas de miel natural\n\n## Modo de preparación\n\n1. Desinfectas las espinacas y las fresas\n2. Pelas las peras, las carambolas\n3. Cortas en rodajas o en tiras medio largas todas las frutas\n4. Despues de desinfectar las espinacas, lavar con abundante agua, posteriormente cortarlas en tiras.\n5. Para el aderezo, se combina en un tupper aparte, el limón, el aceite y la miel. Se revuelve bien.\n6. Después se le agregan todos los ingredientes en un bolt grande, las frutas, la espinaca, los frutos secos y el aderezo.\n7. Y vualá...\n\n---\n\n> Tiempo de preparación: 20-30 min\n\n> Capacidad: 6-8 personas\n\n## Tips\n\n> Se le agrega el aderezo justo cuando se coma, si no lo vas a comer de inmediato lo metes al refrigerador, ya que se puede amargar la ensalada por el limón.",
+    "aproxTime": "20 a 30 min",
+    "tags": [
+      "Ensalada",
+      "Espinaca",
+      "Limón",
+      "Miel",
+      "Navidad"
+    ],
+    "description": "Puedes comerlo para cualquier hora del dia",
+    "author": "lizzz Cabrera",
+    "lito": "Yes",
+    "lastChange": "Nov 25, 2020 9:35 AM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
     "url": "Ensaladilla",
     "title": "Ensaladilla",
     "content": "## Ingredientes\n\n- 3 papas (500g aproximadamente)\n- 2 huevos (112g aproximadamente)\n- 4 cucharadas de mayonesa\n- 1/5 de cebolla\n- 1 lata de atún (140g)\n- 1 pimiento morrón (150g aproximadamente)\n- 2 cucharaditas de sal\n- 1/2taza de chicharos\n- 1 paquete de aceitunas (175g)\n- 4 dientes de ajo (45g aproximadamente)\n\n## Modo de preparación\n\n1. Hervir las papas, los chicharos y los huevos \n2. Asar el pimiento morrón con sal y retirarle la cáscara\n3. Quitarle la cáscara a las papas y machacarlas y agregar el atún\n4. Quitarle la cáscara a los huevos, separar la yema de la clara y partir las claras en cuadros\n5. Partir en rodajas las aceitunas\n6. Pelar los ajos y partirlos en cuadritos\n7. Partir la cebolla en cuadritos\n8. A la mezcla de las papas con el atún agregar los chícharos, las aceitunas, los ajos, la cebolla, el pimiento morrón, las claras de huevo y mezclar\n9. Desmoronar las yemas\n10. Aplanar la mezcla y poner encima las yemas desmoronadas\n\n---\n\n> ⌛ Tiempo de preparación 40 minutos\n\n> 🥞 Capacidad 8 personas\n\n## Tips\n\n>",
@@ -216,7 +270,7 @@ export const dishesData =[
     "description": "Un poco de nutrientes harán bien para tu digestión y es una buena forma de empezar tu mañana",
     "author": "Elisabet Juarez",
     "lito": "Yes",
-    "lastChange": "Nov 22, 2020 8:19 PM",
+    "lastChange": "Nov 24, 2020 11:36 AM",
     "img": {}
   },
   {

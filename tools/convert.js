@@ -1,12 +1,13 @@
 const notionRoutes = require('./notionRoutes.json');
 const { getMarkdown, processNotionMarkdown } = require('./utils');
 const { readFileSync, readdirSync, writeFileSync } = require('fs');
-const { join } = require('path');
+const { join, parse } = require('path');
 
 const recetasPath = notionRoutes.recetas;
 const dir = 'tools/a';
 
 let recetasPaths = readdirSync(join(dir, recetasPath));
+recetasPaths = recetasPaths.filter( path => parse(path).ext === '.md');
 let recetasData = recetasPaths.map( recetaPath => {
     return processNotionMarkdown(getMarkdown(join(dir, recetasPath, recetaPath)));
 } )
