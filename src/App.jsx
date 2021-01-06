@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './css/App.scss';
-//import './css/bulmaswatch.min.css';
 
 import {
   BrowserRouter as Router,
