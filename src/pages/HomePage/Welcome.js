@@ -13,13 +13,13 @@ export default function Welcome() {
                         <p className="title is-1">Núnca es tarde para aprender a cocinar</p>
                     </div>
                     <div className="column">
-                        <img src={`img/people/${1}.png`} style={{marginRight: '-2rem'}}/>
+                        <img alt="Nope, nunca es tarde"  src={`img/people/${1}.png`} style={{marginRight: '-2rem'}}/>
                     </div>
                 </div>
 
                 <div className="columns is-vcentered has-text-centered">
                     <div className="column">
-                        <img src={`img/people/${4}.png`}/>
+                        <img alt="Es lo mejor que pudimos c:"  src={`img/people/${4}.png`}/>
                     </div>
                     <div className={`column is-${columnSize}`}>
                         <p className="title is-2">Hemos preparado un pequeño recetario para que puedas aprender desde tu hogar</p>
@@ -31,13 +31,13 @@ export default function Welcome() {
                         <p className="title is-3">Con el toque exquisito tras encontrar la receta correcta</p>
                     </div>
                     <div className="column">
-                        <img src={`img/people/${2}.png`}/>
+                        <img alt="Algunas salieron al 5to intento"  src={`img/people/${2}.png`}/>
                     </div>
                 </div>
 
                 <div className="columns is-vcentered has-text-centered">
                     <div className="column">
-                        <img src={`img/people/${6}.png`}/>
+                        <img alt="oli"  src={`img/people/${6}.png`}/>
                     </div>
                     <div className={`column is-${columnSize}`}>
                         <p className="title is-1">Acompáñame</p>

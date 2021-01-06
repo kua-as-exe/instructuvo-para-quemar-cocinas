@@ -5,9 +5,9 @@ export default function Footer() {
         <footer className="footer">
             <div className="content has-text-centered">
                 <p>
-                    <strong>Instructivo Para Quemar Cocinas</strong> con mucho cariño por <a>Liz Juarez</a> y <a>Jorge Arreola</a>
+                    <strong>Instructivo Para Quemar Cocinas</strong> con mucho cariño por <b>Liz Juarez</b> y <b>Jorge Arreola</b>
                     <br/>
-                    <small>Última vez actualizado: 30/11/2020</small>
+                    <small>Última vez actualizado: 05/01/2020</small>
                 </p>
                 <p>
                     <a href="https://www.freepik.com/vectors/food">Ilustraciones de uso libre por  - www.freepik.com</a>

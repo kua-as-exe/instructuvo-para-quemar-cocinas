@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
+// import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import EditorJs from 'react-editor-js';
 
-import { Redirect, useLocation, useParams, useRouteMatch, withRouter } from 'react-router-dom';
+import { Redirect, useLocation, useParams } from 'react-router-dom';
 import { dishesData } from './../../data/dishes';
-import { Box, Columns, Container, Content, Heading, Tag, Tile } from '../../components/shared/Bluma';
+
 import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
 import { random, tagsColors } from '../../utils/utils';
 import { gifsData } from '../../data/gifs';
-import eastereggs, { recetasEastereggs } from '../DishesPage/eastereggs';
+import { recetasEastereggs } from '../DishesPage/eastereggs';
 import { FaClock } from 'react-icons/fa';
-  
+import ReactGA from 'react-ga';
+
 const noContentFrases = [
     'BUSCA OTRA O PREGUNTALE A LA ABUE 👵',
     'Otro día más que no podré comer 😥'
@@ -19,6 +20,11 @@ const noContentFrases = [
 
 function DishPage() {
     let { id } = useParams();
+    let {pathname} = useLocation();
+    useEffect( () => {
+        //console.log("GA")
+        ReactGA.pageview(pathname);
+    }, [pathname]);
 
     if(recetasEastereggs[id])
         return (
@@ -60,13 +66,13 @@ function DishPage() {
         </figure>
     )
 
-    const toolbar = () => (
+    /* const toolbar = () => (
         <>
             <div className="box">
                 <h1>Hola</h1>   
             </div>          
         </>
-    )
+    ) */
 
     const receta = () => (
         <div className="container column">
@@ -91,10 +97,10 @@ function DishPage() {
             <section className="hero">
                 <div className="hero-body">
                     <div className="container">
-                        <Heading size={3}>Wops!</Heading>
-                        <Heading size={4}>Parece que aún no hay procedimiento para esta receta {random(surpriseEmoji)} </Heading>
-                        <Heading subtitle size={5}>Nimodo!</Heading>
-                        <Heading subtitle size={4}>{random(noContentFrases).toLowerCase()}</Heading>
+                        <div className="is-3">Wops!</div>
+                        <div className="is-4">Parece que aún no hay procedimiento para esta receta {random(surpriseEmoji)} </div>
+                        <div className="is-5 subtitle">Nimodo!</div>
+                        <div className="is-4 subtitle">{random(noContentFrases).toLowerCase()}</div>
                     </div>
                 </div>
             </section>

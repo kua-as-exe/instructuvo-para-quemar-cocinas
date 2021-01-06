@@ -19,7 +19,7 @@ const TipsPage = () => {
             </div>
             <div className="hero-foot mb-3">
                 <div className="container has-text-centered">
-                    <p>Apoyanos compartiendo para motivarnos a seguir desarrollando este proyecto 👻</p>
+                    <p>Apoyanos compartiendo para motivarnos a seguir desarrollando este proyecto <span role="img" aria-label="emoji de fantasma">👻</span></p>
                 </div>
             </div>
         </section>

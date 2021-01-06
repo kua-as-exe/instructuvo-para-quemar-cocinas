@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 
 import HomePage from './pages/HomePage/HomePage';
 import DishesPage from './pages/DishesPage/DishesPage';
-import DishPage from './pages/DishPage/DishPage';
+// import DishPage from './pages/DishPage/DishPage';
 import EditorPage from './pages/EditorPage/EditorPage';
 
 import TipsPage from './pages/TipsPage/TipsPage';

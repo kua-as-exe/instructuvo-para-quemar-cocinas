@@ -1,16 +1,13 @@
-import React, { useContext, useReducer, useState } from 'react'
+import React, { useState } from 'react'
 
-import Search from './components/Search';
-import { dishesData } from '../../data/dishes.js'
+// import Search from './components/Search';
+// import { dishesData } from '../../data/dishes.js'
 import { useMediaQuery } from 'react-responsive'
 
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useRouteMatch,
-    useParams,
     Redirect
   } from "react-router-dom";
 import DishPage from '../DishPage/DishPage';

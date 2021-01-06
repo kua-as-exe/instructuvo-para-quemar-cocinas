@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { Redirect } from 'react-router-dom';
 
 import { dishesData } from '../../../data/dishes.js'
-import DishPage from '../../DishPage/DishPage.js';
 import DishItem from './DishItem.js';
 
 const removeAccents = (str) =>  str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -14,8 +13,8 @@ function DishesList({filters = {}, prefix = "", select = ()=>{}}) {
 
     useEffect(() => {
         if(prefix !== ""){
-            prefix = removeAccents(prefix.toLowerCase());
-            let words = prefix.split(' ');
+            let newPrefix = removeAccents(prefix.toLowerCase());
+            let words = newPrefix.split(' ');
             // console.log(words)
             let dishes =  dishesData.map( dish => {
                 let points = 0;

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Navbar from 'react-bulma-components/lib/components/navbar';
 
 import {
     Link,
@@ -23,7 +22,8 @@ export default function NavbarComponent({routes}) {
     );
 
     const ExpandButton = () => (
-        <a role="button" 
+        // eslint-disable-next-line
+        <a role="button"
             className="navbar-burger burger" 
             aria-label="menu" 
             aria-expanded="false" 
@@ -37,24 +37,22 @@ export default function NavbarComponent({routes}) {
     )
 
     return (
-        <Navbar>
-            <Navbar.Brand>
+        <nav className="navbar">
+            <div className="navbar-brand">
                 <Link to="/" className="navbar-item">
                     <img className="logo" src="/favicon.png" alt="Logo" width="28" height="28"/>
                     <span><b>Instructivo para quemar cocinas</b></span>
                 </Link>
                 <ExpandButton/>
-            </Navbar.Brand>
+            </div>
 
             <div className={`navbar-menu ${isActive? 'is-active': ''}`}>
-                <Navbar.Container>
-                    {routes
-                        .filter( route => (route.navbarVisible !== false) )
-                        .map( route => link(route.text, route.path) )
-                    }
-                </Navbar.Container>
+                {routes
+                    .filter( route => (route.navbarVisible !== false) )
+                    .map( route => link(route.text, route.path) )
+                }
             </div>
-        </Navbar>
+        </nav>
     )
 }
 

@@ -1,3 +1,0 @@
-# cucharada
-
-g: 15

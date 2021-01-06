@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import EditorJs from 'react-editor-js';
-import { Button, Container, Content } from '../../components/shared/Bluma';
 import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
 import './editor.css';
 
@@ -24,10 +23,10 @@ export default function EditorPage() {
     }
 
     return (
-        <Container>
+        <div className="container">
             <h1>Editor</h1>
-            <Button onClick={ () => {setreadOnly(!readOnly)} }>Solo lectura: {readOnly?'si':'no'}</Button>
-            <Content>
+            <button className="button" onClick={ () => {setreadOnly(!readOnly)} }>Solo lectura: {readOnly?'si':'no'}</button>
+            <div className="content">
                 <EditorJs
                     placeholder="Comienza a escribir aquí"
                     readOnly={readOnly}
@@ -37,11 +36,11 @@ export default function EditorPage() {
                     instanceRef={instance => editorInstance = instance} 
                     />;
 
-            </Content>
-            <Button onClick={ handleSave }>Guardar</Button>
+            </div>
+            <button className="button" onClick={ handleSave }>Guardar</button>
             <pre>
                 {JSON.stringify(data, undefined, 4)}
             </pre>
-        </Container>
+        </div>
     )
 }

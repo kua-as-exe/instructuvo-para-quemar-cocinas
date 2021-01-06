@@ -3,7 +3,7 @@ export const dishesData =[
     "contentType": "markdown",
     "url": "ArrozConLeche",
     "title": "Arroz con leche",
-    "content": "## Ingredientes\n\n- 1 taza de arroz (lavado y remojado)\n- 4 tazas de agua\n- 1 rajita de canela\n- 1 leche condensada\n- 2 yemas de huevo\n- 1/4 de taza de pasitas\n- 1 cascarita de naranja o limón\n- Canela en polvo al gusto\n\n## Modo de preparación\n\n1. Ponga a cocer el arroz con el agua, la rajita de canela y la cáscara de naranja o limón. \n2. Ya cocido el arroz, retire la cáscara de naranja.\n3. Agregue la leche condensada y las yemas, revolviendo rápidamente para que no se cueza el huevo.\n4. Añada las pasitas y deje hervir por 15 minutos.\n5. Retire del fuego y espolvoree la canela en polvo.\n6. Espere a que enfríe y sirva.\n\n---\n\n> Tiempo de preparación: 30 minutos\n\n> Capacidad: 5 personas\n\n## Tips\n\n> Realizar a fuego medio.",
+    "content": "## Ingredientes\n\n- 1 taza de arroz (lavado y remojado)\n- 4 tazas de agua\n- 1 rajita de canela\n- 1 leche condensada\n- 2 yemas de huevo\n- 1/4 de taza de pasitas\n- 1 cascarita de naranja o limón\n- Canela en polvo al gusto\n\n## Modo de preparación\n\n1. Ponga a cocer el arroz con el agua, la rajita de canela y la cáscara de naranja o limón. \n2. Ya cocido el arroz, retire la cáscara de naranja.\n3. Agregue la leche condensada y las yemas, revolviendo rápidamente para que no se cueza el huevo.\n4. Añada las pasitas y deje hervir por 15 minutos.\n5. Retire del fuego y espolvoree la canela en polvo.\n6. Espere a que enfríe y sirva.\n\n---\n\n> Tiempo de preparación: 30 minutos\n\n> Capacidad: 5 personas\n\n## Tips\n\n> Realizar a fuego medio.\n\n![Arroz%20con%20leche%20ba042b97a61d4c7fb8d99d8a0c6efa47/Untitled.png](Arroz%20con%20leche%20ba042b97a61d4c7fb8d99d8a0c6efa47/Untitled.png)",
     "aproxTime": "30-35 minutos",
     "tags": [
       "Dulce",
@@ -237,9 +237,28 @@ export const dishesData =[
   },
   {
     "contentType": "markdown",
+    "url": "GaznatesRellenosDeMerengue",
+    "title": "Gaznates rellenos de merengue",
+    "content": "## Ingredientes\n\n- Merengue francés\n- 1 taza harina de trigo\n- 1/2 cucharada polvo para hornear\n- 1 huevo\n- 30g de mantequilla derretida\n- 1 cucharada de vainilla\n- 1/2 cucharada de azúcar\n- 1/2 cucharadita de sal\n\n## Modo de preparación\n\n1. En un bowl colocar la harina, el polvo para hornear, el azúcar y la sal pasados por un cernidor.\n2. Agregar el huevo, la mantequilla y la vainilla hasta formar una masa.\n3. En la mesa cernir harina y extender la masacon un rodillo o vaso para colocarla enrollada en los moldes.\n4. En un sartén con acéite caliente ir colocando los moldes hasta que la masa esté cocida y dorada.\n5. Colocar en una plato con una servilleta para absorber el aceite los gaznates y rellenarlos con el merengue.\n\n---\n\n> Tiempo de preparación: 1 hora\n\n> Capacidad: 10 personas\n\n## Tips\n\n> Para la elaboración de los moldes para los gaznates se puede usar un tubo del cual se encuentra en el aluminio o plástico autoadherible, cortarlo a la mitad y esas mitades en mitades, teniendo 4 cilindros. Forrarlo con aluminio.\n\n> Para derretir la mantequilla, se pesa y se coloca en una taza para meterla en el microondas en lapsos de 10s o a baño maría.",
+    "aproxTime": "1 hora",
+    "tags": [
+      "Dulce",
+      "Frito",
+      "Harina",
+      "Huevo",
+      "Postre"
+    ],
+    "description": "Un dulce que cualquiera ha amado pero nunca había hallado cómo hacer",
+    "author": "Elisabet Juarez",
+    "lito": "Yes",
+    "lastChange": "Jan 5, 2021 6:27 PM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
     "url": "GelatinaDeRompope",
     "title": "Gelatina de rompope",
-    "content": "## Ingredientes\n\n- 387g de rompope\n- 387g de leche condensada\n- 370g de leche evaporada\n- 3 cucharadas de grenetina\n- 225g de media crema\n- 1/2 taza de agua\n\n## Modo de preparación\n\n1. Licúa o bate el rompope junto con la leche condensada, la leche evaporada y la media crema\n2. En una taza vierte el agua y agrega las 3 cucharadas de grenetina\n3. Lleva a microondas por intervalos de 7 segundos vigilando que no escurra la grenetina, hasta que no queden grumos\n4. Vertir la grenetina con la mezcla anterior y batir o licuar\n5. Vertir en un molde y dejar enfriar de 3-4 horas \n\n---\n\n> ⌛ Tiempo de preparación 15-20 minutos\n\n> 🥞 Capacidad 12 personas\n\n## Tips\n\n>",
+    "content": "## Ingredientes\n\n- 387g de rompope\n- 387g de leche condensada\n- 370g de leche evaporada\n- 3 cucharadas de grenetina\n- 225g de media crema\n- 1/2 taza de agua\n\n## Modo de preparación\n\n1. Licúa o bate el rompope junto con la leche condensada, la leche evaporada y la media crema\n2. En una taza vierte el agua y agrega las 3 cucharadas de grenetina\n3. Lleva a microondas por intervalos de 7 segundos vigilando que no escurra la grenetina, hasta que no queden grumos\n4. Vertir la grenetina con la mezcla anterior y batir o licuar\n5. Vertir en un molde y dejar enfriar de 3-4 horas \n\n---\n\n> ⌛ Tiempo de preparación 15-20 minutos\n\n> 🥞 Capacidad 12 personas\n\n## Tips\n\n[https://www.youtube.com/watch?v=RXoEgv1zCAw](https://www.youtube.com/watch?v=RXoEgv1zCAw)\n\n![https://images.unsplash.com/photo-1593299956909-bd49e75ff8e8?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb](https://images.unsplash.com/photo-1593299956909-bd49e75ff8e8?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)",
     "aproxTime": "15-20 minutos",
     "tags": [
       "Alcohol",
@@ -251,7 +270,7 @@ export const dishesData =[
     "description": "Un postre frío en ocasiones especiales",
     "author": "Elisabet Juarez",
     "lito": "Yes",
-    "lastChange": "Nov 22, 2020 8:19 PM",
+    "lastChange": "Jan 3, 2021 2:14 PM",
     "img": {}
   },
   {
@@ -310,6 +329,40 @@ export const dishesData =[
   },
   {
     "contentType": "markdown",
+    "url": "Lasana-pizza",
+    "title": "Lasaña-pizza",
+    "content": "## Ingredientes\n\nIngredientes\n\n- ½ kg de carne molida\n- 170 g de pepperoni\n- 500 g de queso mozzarella\n- 200 g de queso Parmesano\n- 2 paquetitos de hojas de pasta para lasaña\n- 3-4 zanahorias\n- 3 calabacitas\n\nIngredientes para la salsa\n\n- Aceite de oliva\n- 2 dientes de ajo\n- 1 kg de jitomate\n- Tomillo\n- Romero\n- Vino Blanco (muy opcional)\n\n## Modo de preparación\n\nProcedimiento - salsa\n\n1. En una sartén hondo echamos tantito aceite de oliva junto con los dientes de ajo\n2. Ya caliente el aceite vertimos el kilo de jitomate triturado (a modo de puré)\n3. Revolvemos bien y echamos hojitas de romero y tomillo para darle sabor\n4. Si es quincena podemos echarle media copa de vino blanco para darle más sabor\n\nProcedimiento\n\n1. En una olla ponemos agua a hervir\n2. Ya en el punto de ebullición ponemos las hojas de pasta para que se cuezan un poco\n3. Ya que están blanditas las guardamos para despues\n4. En otra sartén ponemos a cocer nuestra carne y junto a ella nuestro pepperoni\n5. Después de drenar la grasita de la carne la bañamos con la mitad de la salsa que ya hicimos (la carne sigue en la sartén)\n6. Quitamos nuestra sartén del fuego\n7. Empezamos a colocar las hojas de pasta en una charola para hornear honda\n8. Después ponemos de nuestra carne con pepperoni, le vertemos un poco de nuestra salsa y sobre nuestra salsa ponemos el queso parmesano \n9. Después cubrimos la carne y el queso con una hoja de pasta para crear nuestra primera capa y se repite el proceso tantas veces se pueda (siempre una capa sobre otra)\n10. Ya en la ultima capa de pasta agregamos el queso parmesano para hacer una costra de queso\n11. La metemos a hornear a 180° C por media hora aproximadamente\n12. Después de hornearla esperamos 10 min para que se enfrié o se puede romper\n13. ¡Y listo! A comer!\n\n---\n\n> Tiempo de preparación: 1 a 2 horas\n\n> Capacidad: 5 a 6 personas\n\n## Tips\n\n> Aún echándole vino blanco los niños la pueden comer ya que el alcohol se evapora y solo queda un tenue sabor a vino 😃",
+    "aproxTime": "2 horas",
+    "tags": [
+      "Caliente",
+      "Horno",
+      "Pasta"
+    ],
+    "description": "Una combinación de sabores en una deliciosa receta",
+    "author": "Emiliano Paez",
+    "lito": "Yes",
+    "lastChange": "Jan 5, 2021 6:55 PM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
+    "url": "MerengueItaliano",
+    "title": "Merengue Italiano",
+    "content": "## Ingredientes\n\n- 4 claras de huevo\n- 1 limón\n- 280g de azúcar\n- 1 taza de agua\n\n## Modo de preparación\n\n1. Pesar las claras de huevo y con ello calcular la cantidad exacta de azúcar, esta corresponde al doble del peso de las claras.\n2. En una olla poner el azúcar junto con el agua y hervir hasta que llegue a los 110ºC, dejar hirviendo .\n3. Al estar en los 110ºC el azúcar, en un bowl poner las claras a temperatura ambiente junto con el jugo del limón y comenzar a batir.\n4. A los 120ºC el azúcar en punto bola, incorporar en forma de hilo a las claras sin que toquen las aspas.\n5. Seguir batiendo hasta que se enfríe y cuando se voltee el molde no se mueva.\n\n---\n\n> ⌛Tiempo de preparación 40 minutos\n\n> 🥞 Capacidad 12 personas\n\n## Tips\n\n>",
+    "aproxTime": "40 minutos",
+    "tags": [
+      "Claras",
+      "Huevo",
+      "Limón",
+      "Postre"
+    ],
+    "author": "Elisabet Juarez",
+    "lito": "Yes",
+    "lastChange": "Jan 5, 2021 6:47 PM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
     "url": "PastelDeLimon",
     "title": "Pastel de limón",
     "content": "## Ingredientes\n\n- 4 huevos (224g aproximadamente)\n- 1 taza de aceite\n- 3 tazas de harina\n- 1/2 taza de zumo de limón\n- 1 cucharada de ralladura de limón\n- 1 lata de leche evaporada (360g)\n- 3 cucharaditas de polvo para hornear\n- 1 taza de azúcar\n\n## Modo de preparación\n\n1. Cernir en un bowl con un colador la harina, el azúcar y el polvo para hornear\n2. Añadir la leche evaporada con el aceite y batir\n3. Incorporar los huevos, el zumo de limón y la ralladura de limón y batir\n4. Vertir la mezcla en un molde con mantequilla embarrada y harina espolvoreada para que el pastel no se queme\n5. En un horno precalentado a 200 grados poner el molde con la mezcla y dejarlo por 50 minutos o hasta que al insertar un palillo este salga limpio\n\n---\n\n> ⌛ Tiempo de preparación 1 hora 15 minutos aproximadamente\n\n> 🥞 Capacidad 10 personas\n\n## Tips\n\n> 🔆 Al enharinar el molde otra alternativa es colocar aceite en spray",
@@ -344,6 +397,24 @@ export const dishesData =[
     "author": "Elisabet Juarez",
     "lito": "Yes",
     "lastChange": "Nov 22, 2020 8:17 PM",
+    "img": {}
+  },
+  {
+    "contentType": "markdown",
+    "url": "RoscaDeReyes",
+    "title": "Rosca de reyes",
+    "content": "## Ingredientes\n\n- 2 sobres de levadura\n- 1k de harina de trigo\n- 1 1/2 taza de harina de trigo\n- 2 cucharadas de harina de trigo\n- 1 1/2 taza de azúcar glass\n- 2 cucharaditas de polvo para hornear\n- 1/2 taza de mantequilla\n- Fruta al gusto, ya sean ate, higos y/o cerezas\n- 1 1/2 cucharada de vainilla\n- 250g de mantequilla\n- 7 huevos\n- 8 yemas de huevo\n- 1 lata de leche condensada\n- 3 cucharaditas de sal\n- Muñecos de rosca\n- 1/4 taza de agua\n- 2 cucharadas de azúcar\n\n## Modo de preparación\n\n1. En el cuarto de taza de agua agregar los dos sobres de levadura y mezclar hasta que se oncorpore complatamente, agregar 2 cucharadas de harina a la mezcla y dejar por un lado hasta que se doble el tamaño de la mezcla.\n2. Ya sea en una mesa completamente limpia o en un bowl cernir el kilo de harina de manera que quede una especie de volcán, para luego hacer un hoyo en el centro del mismo.\n3. En el hoyo del volcán de la harina agregar los 125g de mantequilla a temperatura ambiente, 4 huevos, 8 yemas de huevo, la levadura previamente preparada, la sal, la vainilla y la leche condensada.\n4. Mezcla los ingredientes e incorpora 125g de mantequilla poco a poco hasta obtener una masa suave, lisa,  consistente y elástica. \n5. Dejar reposar la masa hasta que doble su tamaño.\n6. Precalentar el horno y enharinar colocando mantequilla a la charola y espolvorear harina hasta cubrirla por completa o colocar papel encerado.\n7. En una superficie plana como una mesa, colocar harina para amasar la masa.\n8. Con un rodillo estirar la masa y hacer un hueco en el centro para ir jalándola y estirándola poco a poco hasta obtener la forma y tamaño deaseados.\n9. Dejar reposar  unos minutos.\n10. Para la mezcla de azúcar incorporar 1 1/2 taza de harina, 2 cucharaditas de polvo para hornear y 1 1/2 taza de azúcar glass cernidas en un bowl y mezclar. Añadir 2 huevos y 1/2 taza de mantequilla hasta formar una masa no tan dura. Cortar en tiras.\n11. Decorar la rosca con la fruta y la pasta de azúcar e introducir los muñecos.\n12. Batir un huevo y con una brocha barnizar la rosca y espolvorear el azúcar.\n13. Hornear de 180 a 200º C por 30 minutos o hasta que la rosca esté dorada y al introducir un palillo salga limpio\n\n---\n\n> ⌛ Tiempo de preparación: 3 horas\n\n> 🥞 Capacidad: 8 personas o más\n\n## Tips\n\n> Se puede ingresar un relleno a la rosca, ya sea antes de hornear o una vez horneada y frita partirla a la mitad y colocar el relleno.\n\n> Para que la masa doble su tamaño dejarla cerca de un lugar caliente para que este proceso sea más rápido.\n\n> La mezcla puede ser dividida en 2 partes dependiendo del tamaño de los utensilios y el molde o charola que se use",
+    "aproxTime": "3 horas",
+    "tags": [
+      "Harina",
+      "Navidad",
+      "Panesito",
+      "Postre"
+    ],
+    "description": "La tradicional rosca de las épocas de los reyes magos",
+    "author": "Elisabet Juarez",
+    "lito": "Yes",
+    "lastChange": "Jan 5, 2021 6:26 PM",
     "img": {}
   },
   {

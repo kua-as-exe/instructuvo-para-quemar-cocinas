@@ -1,10 +1,8 @@
 import React from 'react'
-import { Tile, Heading,  } from '../../components/shared/Bluma';
-
-import CardComponent from '../../components/shared/CardComponent';
+//import { Tile, Heading,  } from '../../components/shared/Bluma';
 
 export default function Tiles() {
-    return (
+    /* return (
         <Tile kind="ancestor">
           <Tile size={8} vertical>
             <Tile>
@@ -68,5 +66,6 @@ export default function Tiles() {
 
         </Tile>
 
-    )
+    ) */
+    return (<></>)
 }
