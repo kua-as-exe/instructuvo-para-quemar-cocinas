@@ -5,7 +5,7 @@ import DishesPage from './pages/DishesPage/DishesPage';
 // import DishPage from './pages/DishPage/DishPage';
 import EditorPage from './pages/EditorPage/EditorPage';
 
-import TipsPage from './pages/TipsPage/TipsPage';
+import TipsPage from './pages/TipsPage/TipsPage.jsx';
 
 export const routes = [
     {

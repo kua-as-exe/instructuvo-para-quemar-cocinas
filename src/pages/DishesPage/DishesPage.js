@@ -20,7 +20,7 @@ import useApi from 'use-http-api';
 
 
 const Loading = React.memo(() => {
-    const url = "https://media.giphy.com/media/Z8blEZs9alp16/giphy.gif"
+    const url = "https://media.giphy.com/media/R7eZuOTVtL7gc/giphy.gif"
     const text = "Cocinando tu recetario..."
     return (
         <div className="p-3 content is-active is-align-content-center disable-select">
@@ -33,10 +33,13 @@ const Loading = React.memo(() => {
 })
 
 function HomePage({history}) {
-    const [{ initialLoad, loading, data: dishes, error}] = useApi({
+    const [{ initialLoad, loading, data: dishes, error}, getDishes] = useApi({
         url: 'https://detech-notionapi.netlify.app/.netlify/functions/getCollectionData?id=1b489ba4bc6b4c4b963c7bca626dc497',
-        defaultData: []
+        defaultData: [], autoTrigger: false
     });
+    React.useEffect( ()=>{
+        getDishes()
+    }, [])
 
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");

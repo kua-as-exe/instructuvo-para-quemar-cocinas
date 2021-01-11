@@ -1,10 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import ReactGA from 'react-ga';
-
-const TipsPage = () => {
-    ReactGA.pageview('/recetas')
-    // console.log("A")
+export default function CommingSoon() {
     return (
         <section className="hero is-primary is-medium">
             <div className="hero-body">
@@ -25,5 +21,3 @@ const TipsPage = () => {
         </section>
     )
 }
-
-export default TipsPage;

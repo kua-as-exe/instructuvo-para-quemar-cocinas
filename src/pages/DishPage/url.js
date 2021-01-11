@@ -1,1 +1,2 @@
 export const getPageContent = (id) => `https://detech-notionapi.netlify.app/.netlify/functions/getPageContent?id=${id}`
+export const getPageMinimalContent = (id) => `https://detech-notionapi.netlify.app/.netlify/functions/getPageMinimalContent?id=${id}`

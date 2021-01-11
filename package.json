@@ -29,6 +29,7 @@
     "react-bulma-components": "^3.4.0",
     "react-dom": "^16.14.0",
     "react-ga": "^3.2.1",
+    "react-html-parser": "^2.0.2",
     "react-icons": "^3.11.0",
     "react-markdown": "^5.0.2",
     "react-notion-x": "^2.5.1",
@@ -43,7 +44,7 @@
     "start": "react-scripts start",
     "deploy": "firebase deploy",
     "build": "react-scripts build",
-    "build-deploy": "npm run papas && react-scripts build && npm run deploy",
+    "build-deploy": "react-scripts build && npm run deploy",
     "papas": "node ./tools/convert.js",
     "css-build": "node-sass --omit-source-map-url src/css/App.scss src/css/App.css",
     "css-watch": "npm run css-build -- --watch"

@@ -2,15 +2,14 @@ import React from 'react'
 import { getPageContent } from './url'
 import IframeResizer from 'iframe-resizer-react'
 import { useState } from 'react'
+import Loading from '../../components/shared/Loading'
 
 
 function Content({id}) {
     const [loading, setLoading] = useState(true)
     return (
         <div>
-            { loading && <div>
-                <button className="is-large button is-fullwidth is-loading disabled" style={{border: '0'}} />
-            </div> }
+            { loading && <Loading/> }
             <IframeResizer
                 checkOrigin={false}
                 maxHeight="1000px"
