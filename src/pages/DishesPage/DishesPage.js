@@ -39,7 +39,7 @@ function HomePage({history}) {
     });
     React.useEffect( () => {
         getUsers();
-    }, [getUsers]);
+    }, []);
 
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");
