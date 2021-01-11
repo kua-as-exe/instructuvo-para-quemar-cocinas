@@ -7,7 +7,9 @@ export default function DishesHome() {
             <p className="title is-3 subtitle">Explora nuestro recetario</p>
             <div className="columns">
                 <div className="column">
-                    <img alt="con un poco de práctica todos podemos desarrollar algo de talento" src="img/people.jpg"></img>
+                    <img 
+                        alt="con un poco de práctica todos podemos desarrollar algo de talento" 
+                        src="/img/people.jpg"/>
                 </div>
             </div>
         </div>

@@ -16,8 +16,34 @@ import DishesList from './components/DishesList';
 import DishesHome from './components/DishesHome';
 import ReactGA from 'react-ga';
 import { recetasEastereggs } from './eastereggs';
+import useApi from 'use-http-api';
+
+
+const Loading = React.memo(() => {
+    const url = "https://media.giphy.com/media/Z8blEZs9alp16/giphy.gif"
+    const text = "Cocinando tu recetario..."
+    return (
+        <div className="p-3 content is-active is-align-content-center disable-select">
+            <figure className="mt-0 mb-0">
+                <p className="title is-4 has-text-centred"><em>{text}</em></p>
+                <img className="is-full-mobile is-one-third-tablet is-one-third-desktop is-one-third-widescreen" src={url} alt={text}/>
+            </figure>
+        </div>
+    )
+})
 
 function HomePage({history}) {
+    const [{ initialLoad, loading, data: dishes, pendingOrLoading, error}, getUsers] = useApi({
+        url: 'https://detech-notionapi.netlify.app/.netlify/functions/getCollectionData?id=1b489ba4bc6b4c4b963c7bca626dc497',
+        defaultData: []
+    });
+    React.useEffect( () => {
+        getUsers();
+    }, []);
+    React.useEffect( () => {
+        console.log(dishes);
+    }, [dishes])
+
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");
     const [listVisible, changeListVisible] = useState(false);
@@ -53,9 +79,9 @@ function HomePage({history}) {
                     className="input is-large" 
                     value={searchPrefix}
                     onChange={handleChange}
-                    // onKeyPress={handleKeyPress}
                     onFocus={ () => changeListVisible(true)}
                     type="text" 
+                    disabled={initialLoad || loading}
                     placeholder="Buscar"/>
 
                 <span className="icon is-left">
@@ -84,14 +110,18 @@ function HomePage({history}) {
                     </div>
                 </div>
             </div>
+
+            { loading ? 
+            <Loading/>:
             <div className="container" >
                 <div className="columns">
                     <div className="column is-full-mobile is-one-third-tablet is-one-third-desktop is-one-third-widescreen" style={ (isMobile&&!listVisible)?{display: 'none'}:{}}>
-                        <div className="box"> 
-                            <DishesList 
-                                prefix={searchPrefix}
-                                select={handleSelect}/>
-                        </div>
+                            <div className="box"> 
+                            {   error?
+                                    <div>ERROR</div>:
+                                    <DishesList dishes={dishes} prefix={searchPrefix} select={handleSelect}/>
+                            }
+                        </div> 
                     </div>
                     <div className="column">
                         <div className="box">
@@ -102,14 +132,16 @@ function HomePage({history}) {
                                     {analytics}
                                     <Redirect to="/recetas"/>
                                 </Route>
-                                <Route path='/recetas/:id' component={DishPage}/>
+                                <Route path='/recetas/:id'>
+                                    <DishPage dishes={dishes}/>
+                                </Route>
                                 <Route exact path='/recetas' component={DishesHome}/>
 
                             </Switch>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </section>
     )
 }

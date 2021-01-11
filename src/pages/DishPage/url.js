@@ -1,0 +1,1 @@
+export const getPageContent = (id) => `https://detech-notionapi.netlify.app/.netlify/functions/getPageContent?id=${id}`
