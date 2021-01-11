@@ -6,7 +6,7 @@ import { random, tagsColors } from '../../../utils/utils';
 function DishItem({dishData, showImg = true, showAuthor = true, select = ()=>{}}) {
     
     const getTags = () => 
-        dishData.tags.map( tag => (
+        dishData.Tags.map( tag => (
             <div className={`tag ${random(tagsColors)}`} key={tag}>{tag}</div>
         ))
     
@@ -27,13 +27,13 @@ function DishItem({dishData, showImg = true, showAuthor = true, select = ()=>{}}
                 </div>}
                 <div className="column">
                     <div className="content">
-                        <p className="title is-5" style={{'marginBottom': '0px'}}>{dishData.title}</p>
+                        <p className="title is-5" style={{'marginBottom': '0px'}}>{dishData.Name}</p>
                         {showAuthor && <span className="subtitle is-6">
                             {dishData.author}
                         </span>}
-                        <p>{dishData.description}</p>
+                        <p>{dishData.Descripción}</p>
                         {/* <small>{dishData.fecha}</small> */}
-                        {dishData.tags && <div className="tags">
+                        {dishData.Tags && <div className="tags">
                             {getTags()}
                         </div>}
 

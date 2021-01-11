@@ -51,5 +51,7 @@ $box-shadow: 0 0 0 1px $grey-lighter;
 .navbar-menu.is-active {
     margin-top: -1rem;
 }
-
+.notion-collection-row {
+  display: none;
+}
 //@import url("./bulmaswatch.min.css");
