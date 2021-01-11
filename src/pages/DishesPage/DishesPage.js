@@ -33,16 +33,13 @@ const Loading = React.memo(() => {
 })
 
 function HomePage({history}) {
-    const [{ initialLoad, loading, data: dishes, pendingOrLoading, error}, getUsers] = useApi({
+    const [{ initialLoad, loading, data: dishes, error}, getUsers] = useApi({
         url: 'https://detech-notionapi.netlify.app/.netlify/functions/getCollectionData?id=1b489ba4bc6b4c4b963c7bca626dc497',
         defaultData: []
     });
     React.useEffect( () => {
         getUsers();
-    }, []);
-    React.useEffect( () => {
-        console.log(dishes);
-    }, [dishes])
+    }, [getUsers]);
 
     const isMobile = useMediaQuery({ query: '(max-width: 769px)' })
     const [searchPrefix, changeSearchPrefix] = useState("");

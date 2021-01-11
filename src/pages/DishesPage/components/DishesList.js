@@ -2,18 +2,16 @@ import React, {useState, useEffect} from 'react'
 import { Redirect } from 'react-router-dom';
 
 //import { dishesData } from '../../../data/dishes.js'
-import { uniqueName, removeAccents } from '../../../utils/utils.js';
+import { removeAccents } from '../../../utils/utils.js';
 import DishItem from './DishItem.js';
-
-const url = (dish) => uniqueName(dish.Name);
 
 function DishesList({ dishes = {}, filters = {}, prefix = "", select = ()=>{}}) {
 
     const [DishList, setDishList] = useState([])
 
     useEffect(() => {
-        console.log(dishes && dishes.map(a => url(a)))
-        console.log(dishes)
+        /* console.log(dishes && dishes.map(a => url(a)))
+        console.log(dishes) */
         if(prefix !== ""){
             let newPrefix = removeAccents(prefix.toLowerCase());
             let words = newPrefix.split(' ');

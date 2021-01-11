@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 // import PropTypes from 'prop-types'
-import ReactMarkdown from 'react-markdown'
-import EditorJs from 'react-editor-js';
 
-import { Redirect, useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 // import { dishesData } from './../../data/dishes';
 
-import { EDITOR_JS_TOOLS } from '../../components/shared/EditorJsTools';
 import { random, tagsColors, uniqueName } from '../../utils/utils';
 import { gifsData } from '../../data/gifs';
 import { recetasEastereggs } from '../DishesPage/eastereggs';
@@ -15,17 +12,15 @@ import ReactGA from 'react-ga';
 import Content from './Content';
 import { Link } from 'react-router-dom';
 
-const noContentFrases = [
+/* const noContentFrases = [
     'BUSCA OTRA O PREGUNTALE A LA ABUE 👵',
     'Otro día más que no podré comer 😥'
-]
+] */
 
 function DishPage({dishes}) {
     let { id } = useParams();
     let {pathname} = useLocation();
     useEffect( () => {
-        console.log(dishes)
-        console.log(id)
         ReactGA.pageview(pathname);
     }, [pathname]);
 

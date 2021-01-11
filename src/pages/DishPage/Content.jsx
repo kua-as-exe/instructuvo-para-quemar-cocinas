@@ -1,8 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import useApi from 'use-http-api'
 import { getPageContent } from './url'
-import { useRef } from 'react'
 import IframeResizer from 'iframe-resizer-react'
 import { useState } from 'react'
 
@@ -22,10 +19,6 @@ function Content({id}) {
                 style={{ width: "1px", minWidth: "100%", marginTop: '-3rem'}}/>
         </div>
     )
-}
-
-Content.propTypes = {
-
 }
 
 export default React.memo(Content)
